@@ -68,43 +68,80 @@ exports.forgotPasswordController = async (req, res) => {
     }
   }
 };
-exports.resetPasswordController = async (req, res) => {
-  const { resetToken, password } = req.body;
-  const user = await User.findOne({
-    resetToken,
-    resetTokenExpires: { $gt: Date.now() },
-  });
-  if (!user) {
-    res.status(404).json({
-      message: "User not found",
+exports.resetPasswordController = async (req, res, next) => {
+  // const resetPasswordToken = crypto
+  //   .createHash("sha256")
+  //   .update(req.params.resetToken)
+  //   .digest("hex");
+
+  const resetPasswordToken = req.params.resetToken;
+
+  try {
+    const user = await User.findOne({
+      resetPasswordToken,
+      resetPasswordExpire: { $gt: Date.now() },
     });
-  } else {
-    user.password = password;
-    user.resetToken = undefined;
-    user.resetTokenExpires = undefined;
+
+    if (!user) {
+      return next(new ErrorResponse("Invalid Token", 400));
+    }
+
+    user.password = req.body.password;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+
     await user.save();
-    res.status(200).json({
-      message: "Password reset successfully",
+
+    res.status(201).json({
+      success: true,
+      message: "Password was updated successfully",
+      token: user.getSignedJwtToken(),
     });
+  } catch (err) {
+    next(err);
   }
 };
-exports.updateController = async (req, res) => {
-  const { id } = req.params;
-  const { name, email, password } = req.body;
-  const user = await User.findById(id);
-  if (!user) {
-    res.status(404).json({
-      message: "User not found",
+
+exports.updateController = async (req, res, next) => {
+  const { name, role, email, password } = req.body;
+  let id = req.params.id;
+  try {
+    User.findOne({ _id: id }, (err, user) => {
+      if (err || !user) {
+        return res.status(400).json({
+          error: "No User found found",
+        });
+      }
+      if (!name) {
+        user.name = user.name;
+      } else {
+        user.name = name;
+      }
+      if (!email) {
+        user.email = user.email;
+      } else {
+        user.email = email;
+      }
+
+      if (!password) {
+        user.password = user.password;
+      } else {
+        user.password = password;
+      }
+
+      user.save((err, updatedUser) => {
+        if (err) {
+          console.log("User UPDATE ERROR", err);
+          return res.status(400).json({
+            error: "User update failed",
+          });
+        }
+        res.json(updatedUser);
+      });
     });
-  } else {
-    user.name = name;
-    user.email = email;
-    user.password = password;
-    await user.save();
-    res.status(200).json({
-      message: "User updated successfully",
-      data: user,
-    });
+  } catch (err) {
+    console.error("Update Controller not working");
+    next(err);
   }
 };
 exports.deleteController = async (req, res) => {
