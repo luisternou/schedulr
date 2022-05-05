@@ -59,6 +59,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerjsdoc(swaggerOptions);
 app.use("/apidocs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
+app.use("/api/v1/user", require("./routes/user.route"));
 app.use("/api/v1/schedule", require("./routes/schedule.route"));
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
