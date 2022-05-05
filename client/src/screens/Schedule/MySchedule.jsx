@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import languageData from "../../config/Languages.json";
 import { ToastContainer } from "react-toastify";
-import { getCookie } from "../../helpers/auth";
+import { getCookie, getUserId } from "../../helpers/auth";
 import Navbar from "../../Components/Navbar";
 import Sidebar from "../../Components/Sidebar";
 import Table, {
@@ -29,8 +29,10 @@ const ResultFMEA = ({ history, match }) => {
   useEffect(() => {
     getLanguage();
     const token = getCookie("token");
-    let search_string = match.params.search;
-    fetch(`${process.env.REACT_APP_API_URL}/fmea/search/${search_string}`, {
+    // get current user id
+    const currentUser = getUserId("user");
+    const id = currentUser._id;
+    fetch(`${process.env.REACT_APP_API_URL}/schedule/user/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -51,30 +53,23 @@ const ResultFMEA = ({ history, match }) => {
     if (lang === "af") {
       return [
         {
-          Header: "Projek",
-          accessor: "projectName",
-          Cell: AvatarCell,
-          emailAccessor: "projectNumber",
+          Header: "Datum",
+          accessor: "date",
         },
         {
-          Header: "Model",
-          accessor: "model",
+          Header: "Begin Tyd",
+          accessor: "startTime",
+        },
+
+        {
+          Header: "Eind tyd",
+          accessor: "endTime",
         },
         {
-          Header: "Status",
-          accessor: "status",
-          Cell: StatusPill,
-          Filter: SelectColumnFilter,
-          filter: "includes",
+          Header: "Duur",
+          accessor: "duration",
         },
-        {
-          Header: "Moeite",
-          accessor: "effort",
-        },
-        {
-          Header: "Skepper",
-          accessor: "createdByName",
-        },
+
         {
           Header: "Aksies",
           accessor: "_id",
@@ -85,30 +80,22 @@ const ResultFMEA = ({ history, match }) => {
     if (lang === "de") {
       return [
         {
-          Header: "Projekt",
-          accessor: "projectName",
-          Cell: AvatarCell,
-          emailAccessor: "projectNumber",
+          Header: "Datum",
+          accessor: "date",
         },
         {
-          Header: "Modell",
-          accessor: "model",
+          Header: "Startzeit",
+          accessor: "startTime",
         },
         {
-          Header: "Status",
-          accessor: "status",
-          Cell: StatusPill,
-          Filter: SelectColumnFilter,
-          filter: "includes",
+          Header: "Endzeit",
+          accessor: "endTime",
         },
         {
-          Header: "Aufwand",
-          accessor: "effort",
+          Header: "Dauer",
+          accessor: "duration",
         },
-        {
-          Header: "Ersteller",
-          accessor: "owner",
-        },
+
         {
           Header: "Aktionen",
           accessor: "_id",
@@ -118,30 +105,22 @@ const ResultFMEA = ({ history, match }) => {
     } else {
       return [
         {
-          Header: "Project",
-          accessor: "projectName",
-          Cell: AvatarCell,
-          emailAccessor: "projectNumber",
+          Header: "Date",
+          accessor: "date",
         },
         {
-          Header: "Model",
-          accessor: "model",
+          Header: "Start Time",
+          accessor: "startTime",
         },
         {
-          Header: "Status",
-          accessor: "status",
-          Cell: StatusPill,
-          Filter: SelectColumnFilter,
-          filter: "includes",
+          Header: "End Time",
+          accessor: "endTime",
         },
         {
-          Header: "Effort",
-          accessor: "effort",
+          Header: "Duration",
+          accessor: "duration",
         },
-        {
-          Header: "Role",
-          accessor: "owner",
-        },
+
         {
           Header: "Actions",
           accessor: "_id",

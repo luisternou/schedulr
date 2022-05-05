@@ -2,6 +2,7 @@ const Schedule = require("../models/schedule.model");
 
 exports.createController = async (req, res) => {
   const { userID, date, startTime, endTime, duration, description } = req.body;
+  console.log(req.body);
   const newSchedule = new Schedule({
     userID,
     date,
@@ -57,6 +58,21 @@ exports.getCountUserController = async (req, res) => {
   res.status(200).json({
     message: "Schedule count fetched successfully",
     data: count,
+  });
+};
+
+exports.getNextMonthController = async (req, res) => {
+  // get all schedules for the user that have a date in the next month
+  const { id } = req.params;
+  const nextMonth = new Date();
+  nextMonth.setMonth(nextMonth.getMonth() + 1);
+  const schedule = await Schedule.find({
+    userID: id,
+    date: { $gte: nextMonth },
+  });
+  res.status(200).json({
+    message: "Schedule fetched successfully",
+    data: schedule,
   });
 };
 

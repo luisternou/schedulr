@@ -7,19 +7,19 @@ import App from "./App";
 import Login from "./screens/Auth/Login";
 import Register from "./screens/Auth/Register";
 import Profile from "./screens/Profile";
-import ListFMEA from "./screens/Admin/ListFMEA";
+
 import SuperAdmin from "./screens/SuperAdmin/SuperAdmin";
 import SuperAdminRegister from "./screens/SuperAdmin/SuperAdminRegister";
 import EditUser from "./screens/SuperAdmin/EditUser";
 import ForgetPassword from "./screens/Auth/ForgetPassword";
 import ResetPassword from "./screens/Auth/ResetPassword";
-import NewFMEA from "./screens/FMEA/NewFMEA";
-import MyFMEA from "./screens/FMEA/MyFMEA";
-import ViewFMEA from "./screens/FMEA/ViewFMEA";
-import EditFMEA from "./screens/FMEA/EditFMEA";
-import ImproveFMEA from "./screens/FMEA/ImproveFMEA";
-import ResultFMEA from "./screens/FMEA/ResultFMEA";
-import Search from "./screens/Search";
+
+// schedule imports
+import NewSchedule from "./screens/Schedule/NewSchedule";
+import ViewSchedule from "./screens/Schedule/ViewSchedule";
+import EditSchedule from "./screens/Schedule/EditSchedule";
+import MySchedule from "./screens/Schedule/MySchedule";
+
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import AdminRoute from "./Routes/AdminRoute";
 import SuperAdminRoute from "./Routes/SuperAdminRoute";
@@ -47,14 +47,15 @@ ReactDOM.render(
         render={(props) => <ResetPassword {...props} />}
       />
       <ProtectedRoute path="/profile" exact component={Profile} />
-      <ProtectedRoute path="/fmea/new" exact component={NewFMEA} />
-      <ProtectedRoute path="/fmea/my" exact component={MyFMEA} />
-      <ProtectedRoute path="/fmea/view/:id" exact component={ViewFMEA} />
-      <ProtectedRoute path="/fmea/edit/:id" exact component={EditFMEA} />
-      <ProtectedRoute path="/fmea/improve/:id" exact component={ImproveFMEA} />
-      <ProtectedRoute path="/result/:search" exact component={ResultFMEA} />
-      <ProtectedRoute path="/search" exact component={Search} />
-      <AdminRoute path="/admin" exact component={ListFMEA} />
+      <ProtectedRoute path="/schedule/new" exact component={NewSchedule} />
+      <ProtectedRoute path="/schedule/id/:id" exact component={ViewSchedule} />
+      <ProtectedRoute
+        path="/schedule/id/:id/edit"
+        exact
+        component={EditSchedule}
+      />
+      <ProtectedRoute path="/schedule/my" exact component={MySchedule} />
+
       <SuperAdminRoute path="/superadmin" exact component={SuperAdmin} />
       <SuperAdminRoute
         path="/superadmin/editUser/:id"
