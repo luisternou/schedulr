@@ -4,6 +4,8 @@ const router = express.Router();
 const {
   loginController,
   registerController,
+  getAllController,
+  getByIDController,
   updateController,
   deleteController,
   forgotPasswordController,
@@ -12,6 +14,8 @@ const {
 
 router.post("/register", registerController);
 router.post("/login", loginController);
+router.get("/", getAllController);
+router.get("/id/:id", getByIDController);
 router.put("/update/:id", updateController);
 router.delete("/delete/:id", deleteController);
 

@@ -37,6 +37,23 @@ exports.loginController = async (req, res) => {
     }
   }
 };
+
+exports.getAllController = async (req, res) => {
+  const users = await User.find();
+  res.status(200).json({
+    message: "Users fetched successfully",
+    data: users,
+  });
+};
+exports.getByIDController = async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findById(id);
+  res.status(200).json({
+    message: "User fetched successfully",
+    data: user,
+  });
+};
+
 exports.forgotPasswordController = async (req, res) => {
   const { email } = req.body;
   const user = await User.findOne({ email });

@@ -1,0 +1,70 @@
+{
+  "no_risk": {
+    "risk_of_failure": {
+      "af": "Geen",
+      "de": "Keines",
+      "en": "None"
+    },
+    "need_for_action": {
+      "af": "Geen aksie nodig",
+      "de": "Keine Handlungsbedarf",
+      "en": "No need for action"
+    },
+    "measures": {
+      "af": "Geen",
+      "de": "Keine",
+      "en": "None"
+    }
+  },
+  "acceptable": {
+    "risk_of_failure": {
+      "af": "Aanvaarbaar",
+      "de": "Akzeptabel",
+      "en": "Acceptable"
+    },
+    "need_for_action": {
+      "af": "Geen dringende aksie nodig nie",
+      "de": "Kein zwingender Handlungsbedarf",
+      "en": "No compelling need for action"
+    },
+    "measures": {
+      "af": "Kan geformuleer en geïmplementeer word",
+      "de": "Können formuliert und umgesetzt werden",
+      "en": "Can be formulated and implemented"
+    }
+  },
+  "medium": {
+    "risk_of_failure": {
+      "af": "Medium",
+      "de": "Mittel",
+      "en": "Medium"
+    },
+    "need_for_action": {
+      "af": "Behoefte aan aksie",
+      "de": "Dringender Handlungsbedarf",
+      "en": "Need for action"
+    },
+    "measures": {
+      "af": "Behoort geformuleer en geïmplementeer te word",
+      "de": "Sollten formuliert und umgesetzt werden",
+      "en": "Ought to be formulated and implemented"
+    }
+  },
+  "high": {
+    "risk_of_failure": {
+      "af": "Hoog",
+      "de": "Hoch",
+      "en": "High"
+    },
+    "need_for_action": {
+      "af": "Dringende aksie nodig",
+      "de": "Dringender Handlungsbedarf",
+      "en": "Urgent need for action"
+    },
+    "measures": {
+      "af": "Moet geformuleer en geïmplementeer te word",
+      "de": "Müssen formuliert und umgesetzt werden",
+      "en": "Must be formulated and implemented"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "af": "Huis",
+    "de": "Home",
+    "en": "Home",
+    "link": "/",
+    "icon": "fas fa-tachometer-alt",
+    "role": "user"
+  },
+  {
+    "af": "Soek",
+    "de": "Suchen",
+    "en": "Search",
+    "link": "/search",
+    "icon": "fas fa-search",
+    "role": "user"
+  },
+
+  {
+    "af": "Nuwe FMEA",
+    "de": "Neue FMEA",
+    "en": "New FMEA",
+    "link": "/fmea/new",
+    "icon": "far fa-file-alt",
+    "role": "user"
+  },
+  {
+    "af": "My FMEAs",
+    "de": "Meine FMEAs",
+    "en": "My FMEAs",
+    "link": "/fmea/my",
+    "icon": "far fa-list-alt",
+    "role": "user"
+  },
+
+  {
+    "af": "Wys alle FMEAS",
+    "de": "Alle FMEAs anzeigen",
+    "en": "View all FMEAs",
+    "link": "/admin",
+    "icon": "fas fa-th-list",
+    "role": "admin"
+  },
+  {
+    "af": "Gebruikers",
+    "de": "Benutzer",
+    "en": "Users",
+    "link": "/superadmin",
+    "icon": "fas fa-users",
+    "role": "superadmin"
+  }
+]

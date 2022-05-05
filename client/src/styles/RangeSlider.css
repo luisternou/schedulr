@@ -1,0 +1,20 @@
+/* Adapted from https://codepen.io/iamanmoldubey/pen/Prveda */
+
+.RangeSlider {
+  -webkit-appearance: none !important;
+  background: #333333;
+  height: 4px;
+  width: inherit;
+}
+.RangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #dedede;
+  background-image: url("https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/DoubleChevronLeftRight-512.png");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border-radius: 96px;
+  height: 32px;
+  width: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}

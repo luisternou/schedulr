@@ -1,0 +1,86 @@
+[
+  {
+    "af": "Projeknaam",
+    "de": "Projektname",
+    "en": "Project name",
+    "value": "projectName"
+  },
+  {
+    "af": "Projeknommer",
+    "de": "Projektnumber",
+    "en": "Project Number",
+    "value": "projectNumber"
+  },
+  {
+    "af": "Model",
+    "de": "Modell",
+    "en": "Model",
+    "value": "model"
+  },
+  {
+    "af": "Veranderingsrede",
+    "de": "Änderungsgrund",
+    "en": "Change State",
+    "value": "changeState"
+  },
+  {
+    "af": "Geskep deur",
+    "de": "Erstellt durch",
+    "en": "Created By",
+    "value": "createdByName"
+  },
+  {
+    "af": "Eienaar",
+    "de": "Leiter",
+    "en": "Owner",
+    "value": "owner"
+  },
+  {
+    "af": "Moeite",
+    "de": "Aufwand",
+    "en": "Effort",
+    "value": "effort"
+  },
+  {
+    "af": "Funksie",
+    "de": "Funktion",
+    "en": "Function",
+    "value": "function"
+  },
+  {
+    "af": "Mislukkingsmodus",
+    "de": "Ausfallmodus",
+    "en": "Failue Mode",
+    "value": "failureMode"
+  },
+  {
+    "af": "Mislukkingseffect",
+    "de": "Ausfalleffekt",
+    "en": "Failure Effect",
+    "value": "failureEffect"
+  },
+  {
+    "af": "Oorsaak",
+    "de": "Ursache",
+    "en": "Cause",
+    "value": "cause"
+  },
+  {
+    "af": "Huidige beheer",
+    "de": "Aktuelle Maßnahmen",
+    "en": "Current Control",
+    "value": "currentControl"
+  },
+  {
+    "af": "Verbeeterings gemaak",
+    "de": "Vorgenommene Verbesserungen",
+    "en": "Improvments Made",
+    "value": "improvementsMade"
+  },
+  {
+    "af": "Datum",
+    "de": "Datum",
+    "en": "Date",
+    "value": "createdAt"
+  }
+]

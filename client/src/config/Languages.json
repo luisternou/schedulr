@@ -1,0 +1,965 @@
+{
+  "homepage_total_fmeas_submitted": {
+    "af": "Hele Antal geskepte FMEAs",
+    "de": "Anzahl aller erstellten FMEAs",
+    "en": "Total number of FMEAs submitted"
+  },
+  "homepage_total_you_fmeas_submitted": {
+    "af": "Antal van jou geskepte FMEAS",
+    "de": "Anzahl der von dir erstellten FMEAs",
+    "en": "Amount of FMEAs submitted by you"
+  },
+  "homepage_total_fmeas_submitted_lastmonth": {
+    "af": "Verlede maand geskepte FMEAs",
+    "de": "Im letzten Monat erstellten FMEAS",
+    "en": "FMEAs created in the last Month"
+  },
+  "homepage_total_you_fmeas_last_month": {
+    "af": "FMEAs van jou verlede maand geskep",
+    "de": "FMEAs von dir im letzen Monat erstellt ",
+    "en": "FMEAs submitted by you last month"
+  },
+  "homepage_table_my_latest_fmeas": {
+    "af": "My nuutste FMEAs",
+    "de": "Meine neuesten FMEAs",
+    "en": "My latest FMEAs"
+  },
+  "homepage_table_see_all": {
+    "af": "Wys alles",
+    "de": "Alle anzeigen",
+    "en": "See All"
+  },
+
+  "homepage_table_project_name": {
+    "af": "Projeknaam",
+    "de": "Projektname",
+    "en": "Project name"
+  },
+  "homepage_table_project_number": {
+    "af": "Projeknommer",
+    "de": "Projektnummer",
+    "en": "Project number"
+  },
+  "homepage_table_created_on": {
+    "af": "Geskep op",
+    "de": "Erstellt am",
+    "en": "Created on"
+  },
+  "homepage_table_status": {
+    "af": "Status",
+    "de": "Status",
+    "en": "Status"
+  },
+
+  "homepage_table_no_fmeas": {
+    "af": "Jy het nog geen FMEAs geskep",
+    "de": "Du hast noch keine FMEAs erstellt",
+    "en": "You have not submitted any FMEAs"
+  },
+
+  "homepage_welcome_to_name": {
+    "af": "Welkom by ViLix ",
+    "de": "Willkommen bei ViLix ",
+    "en": "Welcome to ViLix "
+  },
+  "homepage_welcome_explanation_part_one": {
+    "af": "Welkom by die ViLix FMEA suite, hier kann jy jou ",
+    "de": "Willkommen bei der ViLix FMEA Suite. Hier können Sie Ihre ",
+    "en": "Welcome to the ViLix FMEA suite. Here you can submit and manage your FMEAs"
+  },
+  "homepage_welcome_explanation_part_two": {
+    "af": "FMEAs indien en bestuur",
+    "de": " FMEAs einreichen und verwalten.",
+    "en": "FMEAs"
+  },
+
+  "homepage_welcome_how_to_use": {
+    "af": "Hoe om diet te gebruik",
+    "de": "Wie man es benutzt",
+    "en": "How to use it"
+  },
+  "homepage_welcome_new_fmea": {
+    "af": "Klik op ",
+    "de": "Klick auf ",
+    "en": "Click on "
+  },
+
+  "homepage_welcome_new_fmea_submit": {
+    "af": "Vul die vorm in en klik op Stuur",
+    "de": "Fülle das Formular aus ind click auf Senden",
+    "en": "Fill in the form and click Submit"
+  },
+  "homepage_welcome_view_all_part_one": {
+    "af": "Om alle FMEAs te sien, klik op ",
+    "de": "Um alle FMEAs zu sehen, klick auf ",
+    "en": "To view all your submissions, click on "
+  },
+  "homepage_welcome_view_all_part_two": {
+    "af": " Hier kan jy individuele FMEAs beskou, verwerk en verwyder",
+    "de": " Hier kannst du einzelne FMEAs ansehen, bearbeiten und löschen",
+    "en": " Here you can view individual FMEAs, edit them and delete them."
+  },
+  "homepage_welcome_improve_part_one": {
+    "af": "Om verbeterings wat jy gemaak het by te voeg klick op ",
+    "de": "Um Verbesserungen die vorgenommen wurden hinzuzufügen klick auf ",
+    "en": "To add improvements you made, click on "
+  },
+  "homepage_welcome_improve_part_two": {
+    "af": " en klik op Beskou en blaai af tot jy Voeg verbeterings by sien en klik daarop",
+    "de": " klicken Sie auf Ansicht und scrollen Sie nach unten, bis Sie Verbesserungen hinzufügen sehen und klick darauf",
+    "en": " and click on View and scroll down until you see Add improvments and click on it"
+  },
+  "homepage_welcome_status": {
+    "af": "As jy vir al funksies in die FMEA bygevoeg het, verander die Status von Onvolledig na Voltooi.",
+    "de": "Wenn du für alle Funktionen in der FMEA hinzugefügt hast, ändert sich der Status von Unvollständig zu Vollständig.",
+    "en": "If you added improvements to all functions in the FMEA, the status will change from Incomplete to Complete."
+  },
+  "homepage_welcome_new_fmea_link": {
+    "af": "Nuwe FMEA.",
+    "de": "Neue FMEA",
+    "en": "New FMEA"
+  },
+  "homepage_welcome_my_fmea_link": {
+    "af": "My FMEAs",
+    "de": "Meine FMEAs",
+    "en": "My FMEAs"
+  },
+
+  "result_search_result": {
+    "af": "Soekresultaate",
+    "de": "Suchergebnisse",
+    "en": "Search Results"
+  },
+  "result_no_results": {
+    "af": "Geen FMEAs gevind met hiedie kriteria",
+    "de": "Keine FMEAs mit diesen Kriterien gefunden",
+    "en": "No FMEAs found with these criterias"
+  },
+  "fmea_table_project": {
+    "af": "projek",
+    "de": "Projekt",
+    "en": "Project"
+  },
+  "fmea_table_model": {
+    "af": "Model",
+    "de": "Modell",
+    "en": "Model"
+  },
+  "fmea_table_status": {
+    "af": "Status",
+    "de": "Status",
+    "en": "Status"
+  },
+  "fmea_table_effort": {
+    "af": "Moeite",
+    "de": "Aufwand",
+    "en": "Effort"
+  },
+  "fmea_table_owner": {
+    "af": "Eienaar",
+    "de": "Leiter",
+    "en": "Owner"
+  },
+  "fmea_table_actions": {
+    "af": "Aksies",
+    "de": "Aktionen",
+    "en": "Actions"
+  },
+  "table_name": {
+    "af": "Naam",
+    "de": "Name",
+    "en": "Name"
+  },
+
+  "search_search_fmea": {
+    "af": "Soek FMEAs",
+    "de": "FMEAs durchsuchen",
+    "en": "Search FMEAs"
+  },
+  "search_global_join": {
+    "af": "Globale aansluiting",
+    "de": "Globale Verknüpfung",
+    "en": "Global Join"
+  },
+  "search_join_and": {
+    "af": "EN",
+    "de": "UND",
+    "en": "AND"
+  },
+  "search_join_or": {
+    "af": "OF",
+    "de": "ODER",
+    "en": "OR"
+  },
+  "search_field": {
+    "af": "Veld",
+    "de": "Feld",
+    "en": "Field"
+  },
+  "search_value": {
+    "af": "Waarde",
+    "de": "Wert",
+    "en": "Value"
+  },
+  "search_field_placeholder": {
+    "af": "Kies 'n soekkriterium",
+    "de": "Wähle ein Suchkriterium",
+    "en": "Select a Search criteria"
+  },
+  "search_value_placeholder": {
+    "af": "Die waarde om na wat te soek",
+    "de": "Wert der gesucht werden soll",
+    "en": "Value that should be searched for"
+  },
+  "search_add_criteria": {
+    "af": "Voeg 'n soekkriterium by",
+    "de": "Suchkriterium hinzufügen",
+    "en": "Add a Search criteria"
+  },
+  "search_remove_criteria": {
+    "af": "Verwyder 'n soekkriterium",
+    "de": "Suchkriterium entfernen",
+    "en": "Remove a Search criteria"
+  },
+  "search_submit": {
+    "af": "Soek",
+    "de": "Suchen",
+    "en": "Search"
+  },
+  "search_admin_search": {
+    "af": "Soek as 'n Admin",
+    "de": "Als Admin suchen",
+    "en": "Search as Admin"
+  },
+  "myfmea_my_fmea": {
+    "af": "My FMEAs",
+    "de": "Meine FMEAs",
+    "en": "My FMEA"
+  },
+  "myfmea_no_fmea": {
+    "af": "Jy het nog geen FMEAs geskep",
+    "de": "Du hast noch keine FMEAs erstellt",
+    "en": "You have not submitted any FMEAs"
+  },
+
+  "admin_view_all_fmea": {
+    "af": "Beskou al FMEAs",
+    "de": "Alle FMEAs ansehen",
+    "en": "View all FMEAs"
+  },
+
+  "admine_no_fmeas": {
+    "af": "Jy het nog geen FMEAs geskep",
+    "de": "Du hast noch keine FMEAs erstellt",
+    "en": "You have not submitted any FMEAs"
+  },
+
+  "users_users": {
+    "af": "Gebruikers",
+    "de": "Benutzer",
+    "en": "Users"
+  },
+  "users_name": {
+    "af": "Naam",
+    "de": "Name",
+    "en": "Name"
+  },
+  "users_role": {
+    "af": "Rol",
+    "de": "Rolle",
+    "en": "Role"
+  },
+  "users_actions": {
+    "af": "Aksies",
+    "de": "Aktionen",
+    "en": "Actions"
+  },
+  "newfmea_new_fmea": {
+    "af": "Skep 'n nuwe FMEA",
+    "de": "Neue FMEA erstellen",
+    "en": "Create new FMEA"
+  },
+
+  "fmea_fmea_type": {
+    "af": "FMEA tipe",
+    "de": "FMEA Art",
+    "en": "FMEA Type"
+  },
+  "fmea_design_fmea": {
+    "af": "Ontwerp-FMEA",
+    "de": "Design-FMEA",
+    "en": "Design FMEA"
+  },
+  "fmea_process_fmea": {
+    "af": "Proses-FMEA",
+    "de": "Prozess-FMEA",
+    "en": "Process-FMEA"
+  },
+  "fmea_project_name": {
+    "af": "Projeknaam",
+    "de": "Projektname",
+    "en": "Project name"
+  },
+  "fmea_project_number": {
+    "af": "Projeknommer",
+    "de": "Projektnummer",
+    "en": "Project number"
+  },
+  "fmea_model": {
+    "af": "Model",
+    "de": "Modell",
+    "en": "Model"
+  },
+  "fmea_change_state": {
+    "af": "Veranderingsrede",
+    "de": "Änderungsgrund",
+    "en": "Change State"
+  },
+  "fmea_created_by": {
+    "af": "Geskep deur",
+    "de": "Erstellt von",
+    "en": "Created by"
+  },
+  "fmea_owner": {
+    "af": "Eienaar",
+    "de": "Leiter",
+    "en": "Owner"
+  },
+  "fmea_effort": {
+    "af": "Moeite",
+    "de": "Aufwand",
+    "en": "Effort"
+  },
+  "fmea_functions": {
+    "af": "Funksies",
+    "de": "Funktionen",
+    "en": "Functions"
+  },
+  "fmea_function": {
+    "af": "Funksie",
+    "de": "Funktion",
+    "en": "Function"
+  },
+  "fmea_failure_mode": {
+    "af": "Misslukingsmodus",
+    "de": "Ausfallmodus",
+    "en": "Failure mode"
+  },
+  "fmea_failure_effect": {
+    "af": "Misslukkingseffek",
+    "de": "Ausfalleffekt",
+    "en": "Failure effect"
+  },
+  "fmea_severity": {
+    "af": "Erns",
+    "de": "Schweregrad",
+    "en": "Severity"
+  },
+  "fmea_cause": {
+    "af": "Oorsaak",
+    "de": "Ursache",
+    "en": "Cause"
+  },
+  "fmea_occurrence": {
+    "af": "Voorkoms",
+    "de": "Vorkommen",
+    "en": "Occurrence"
+  },
+  "fmea_detection": {
+    "af": "Opsporing",
+    "de": "Erkennung",
+    "en": "Detection"
+  },
+  "fmea_current_control": {
+    "af": "Huidige beheer",
+    "de": "Aktuelle Maßnahmen",
+    "en": "Current measures"
+  },
+  "fmea_rpn": {
+    "af": "RPN",
+    "de": "RPZ",
+    "en": "RPN"
+  },
+  "fmea_add_function": {
+    "af": "Voeg 'n funksie by",
+    "de": "Funktion hinzufügen",
+    "en": "Add a function"
+  },
+  "fmea_remove_function": {
+    "af": "Verwyder die funksie boe",
+    "de": "Funktion oben entfernen",
+    "en": "Remove function above"
+  },
+  "fmea_submit": {
+    "af": "Stuur",
+    "de": "Senden",
+    "en": "Submit"
+  },
+  "fmea_improvements_made": {
+    "af": "Verbeterings gemaak",
+    "de": "Vorgenommene Verbesserungen",
+    "en": "Improvements made"
+  },
+
+  "viewfmea_view_fmea": {
+    "af": "Beskou FMEA",
+    "de": "FMEA anzeigen",
+    "en": "View FMEA"
+  },
+  "viewfmea_control": {
+    "af": "Beheer",
+    "de": "Maßnahmen",
+    "en": "Measures"
+  },
+  "viewfmea_edit_fmea": {
+    "af": "Verwerk hierdie FMEA",
+    "de": "FMEA bearbeiten",
+    "en": "Edit FMEA"
+  },
+  "viewfmea_add_improvements": {
+    "af": "Voeg verbeterings by",
+    "de": "Verbesserungen hinzufügen",
+    "en": "Add improvments"
+  },
+  "viewfmea_improvments": {
+    "af": "Verbeterings",
+    "de": "Verbesserungen",
+    "en": "Improvments"
+  },
+  "viewfmea_original_state": {
+    "af": "Oorspronklike toestand",
+    "de": "Originalzustand",
+    "en": "Original state"
+  },
+  "viewfmea_improved_state": {
+    "af": "Verbeterde toestand",
+    "de": "Verbesserter Zustand",
+    "en": "Improved state"
+  },
+  "viewfmea_assessment": {
+    "af": "Evaluering",
+    "de": "Bewertung",
+    "en": "Assessment"
+  },
+  "generatepdf_generate_pdf": {
+    "af": "Genereer PDF",
+    "de": "PDF Generieren",
+    "en": "Generate PDF"
+  },
+  "generatepdf_on": {
+    "af": "op ",
+    "de": "am ",
+    "en": "on "
+  },
+  "generatepdf_submitted_by": {
+    "af": "ingedien deur ",
+    "de": "Eingereicht von ",
+    "en": "Submitted by "
+  },
+  "generatepdf_fmea_report": {
+    "af": "FMEA verslag ",
+    "de": "FMEA Bericht ",
+    "en": "FMEA report "
+  },
+  "generatepdf_functions_on_following_page": {
+    "af": "Funksies is op volgende bladsy ",
+    "de": "Funktionen sind auf der folgenden Seite ",
+    "en": "Functions are on the following page "
+  },
+  "generatepdf_original_state": {
+    "af": "Oorspronklike toestand",
+    "de": "Originalzustand",
+    "en": "Original state"
+  },
+  "generatepdf_improved_state": {
+    "af": "Verbeterde toestand",
+    "de": "Verbesserter Zustand",
+    "en": "Improved state"
+  },
+
+  "editfmea_edit_fmea": {
+    "af": "Verwerk FMEA",
+    "de": "FMEA bearbeiten",
+    "en": "Edit FMEA"
+  },
+  "improvefmea_improve_fmea": {
+    "af": "Voeg FMEA verbeterings by",
+    "de": "FMEA Verbesserungen hinzufügen",
+    "en": "Add FMEA Improvments"
+  },
+  "improvefmea_improvements_made": {
+    "af": "Verbeterings gemaak",
+    "de": "Vorgenommene Verbesserungen",
+    "en": "Improvements made"
+  },
+  "navbar_search": {
+    "af": "Soek",
+    "de": "Suchen",
+    "en": "Search"
+  },
+  "userdropdown_edit_profile": {
+    "af": "Verwerk Profiel",
+    "de": "Profil bearbeiten",
+    "en": "Edit profile"
+  },
+  "userdropdown_logout": {
+    "af": "Teken uit",
+    "de": "Ausloggen",
+    "en": "Logout"
+  },
+  "user_profile": {
+    "af": "Profiel",
+    "de": "Profil",
+    "en": "Profile"
+  },
+  "user_edit_profile": {
+    "af": "Verwerk profiel",
+    "de": "Profil bearbeiten",
+    "en": "Edit Profile"
+  },
+  "user_role": {
+    "af": "Rol",
+    "de": "Rolle",
+    "en": "Role"
+  },
+  "user_email": {
+    "af": "Epos",
+    "de": "Email",
+    "en": "Email"
+  },
+  "user_name": {
+    "af": "Naam",
+    "de": "Name",
+    "en": "Name"
+  },
+  "user_password": {
+    "af": "Wagwoord",
+    "de": "Passwort",
+    "en": "Password"
+  },
+  "user_confirm_password": {
+    "af": "Bevestig wagwoord",
+    "de": "Passwort bestätigen",
+    "en": "Confirm Password"
+  },
+  "user_change_password": {
+    "af": "Verander wagwoord",
+    "de": "Passwort ändern",
+    "en": "Change Password"
+  },
+  "user_submit": {
+    "af": "Stuur",
+    "de": "Senden",
+    "en": "Submit"
+  },
+  "auth_login": {
+    "af": "Teken in",
+    "de": "Einloggen",
+    "en": "Login"
+  },
+  "auth_register": {
+    "af": "Registreer",
+    "de": "Registrieren",
+    "en": "Register"
+  },
+  "auth_forgot_password": {
+    "af": "Wagwoord vergeet",
+    "de": "Passwort vergessen",
+    "en": "Forgot Password"
+  },
+  "auth_reset_password": {
+    "af": "Herstel wagwoord",
+    "de": "Passwort zurücksetzen",
+    "en": "Reset Password"
+  },
+  "auth_email": {
+    "af": "Epos",
+    "de": "Email",
+    "en": "Email"
+  },
+  "auth_password": {
+    "af": "Wagwoord",
+    "de": "Passwort",
+    "en": "Password"
+  },
+  "auth_confirm_password": {
+    "af": "Bevestig wagwoord",
+    "de": "Passwort bestätigen",
+    "en": "Confirm Password"
+  },
+  "auth_name": {
+    "af": "Naam",
+    "de": "Name",
+    "en": "Name"
+  },
+  "auth_submit": {
+    "af": "Stuur",
+    "de": "Senden",
+    "en": "Submit"
+  },
+  "auth_or": {
+    "af": "of",
+    "de": "oder",
+    "en": "or"
+  },
+  "auth_create_account": {
+    "af": "Registreer",
+    "de": "Registrieren",
+    "en": "Register"
+  },
+  "superadminregister_super_admin_register": {
+    "af": "Registreer as 'n Superadmin",
+    "de": "Als Superadmin registrieren",
+    "en": "Register as a Superadmin"
+  },
+  "superadminregister_message": {
+    "af": "Ongelukkig kann jy nie as 'n Superadmin regestreer, omdat reeds een registreer is. Asseblief registreer as 'n normale gebruiker en vra 'n Superadmin jy in die groep te sit.",
+    "de": "Leider können Sie sich nicht als Superadmin registrieren, da bereits einer registriert ist. Bitte registrieren Sie sich als normaler Benutzer und bitten Sie einen Superadmin, Sie zu dieser Gruppe hinzuzufügen",
+    "en": "Unfortunately you cannot register as a super admin as one is already registered. Please register as a normal user and ask a Superadmin to add you to this group"
+  },
+  "superadmin_super_admin": {
+    "af": "Gebruiker lys",
+    "de": "Benutzerlitste",
+    "en": "User list"
+  },
+  "superadmin_no_users": {
+    "af": "Nog niemand het registreer nie",
+    "de": "Noch keiner hat sich registriert",
+    "en": "No-one has registered"
+  },
+  "languagedropdown_language": {
+    "af": "Tale",
+    "de": "Sprachen",
+    "en": "Languages"
+  },
+  "edituser_profile": {
+    "af": "Profiel",
+    "de": "Profil",
+    "en": "Profile"
+  },
+  "edituser_edit": {
+    "af": "Verwerk",
+    "de": "Bearbeite",
+    "en": "Edit"
+  },
+  "edituser_role": {
+    "af": "Rol",
+    "de": "Rolle",
+    "en": "Role"
+  },
+  "edituser_email": {
+    "af": "Epos",
+    "de": "Email",
+    "en": "Email"
+  },
+  "edituser_name": {
+    "af": "Naam",
+    "de": "Name",
+    "en": "Name"
+  },
+  "edituser_password": {
+    "af": "Wagwoord",
+    "de": "Passwort",
+    "en": "Password"
+  },
+  "edituser_confirm_password": {
+    "af": "Bevestig wagwoord",
+    "de": "Passwort bestätigen",
+    "en": "Confirm Password"
+  },
+  "edituser_change_password": {
+    "af": "Verander wagwoord",
+    "de": "Passwort ändern",
+    "en": "Change Password"
+  },
+  "edituser_submit": {
+    "af": "Stuur",
+    "de": "Senden",
+    "en": "Submit"
+  },
+  "edituser_select_role": {
+    "af": "Kies 'n rol",
+    "de": "Wähle eine Rolle",
+    "en": "Select a Role"
+  },
+  "edituser_select_superadmin": {
+    "af": "Superadmin",
+    "de": "Superadmin",
+    "en": "Superadmin"
+  },
+  "edituser_select_admin": {
+    "af": "Admin",
+    "de": "Admin",
+    "en": "Admin"
+  },
+  "edituser_select_user": {
+    "af": "Gebruiker",
+    "de": "Benutzer",
+    "en": "User"
+  },
+  "toast_delete_fmea": {
+    "af": "Die FMEA is verwyder ",
+    "de": "Die FMEA wurde gelöscht",
+    "en": "The FMEA has been deleted"
+  },
+  "toast_something_went_wrong": {
+    "af": "Iets het verkeerd gegaan ",
+    "de": "Da ist etwas schiefgelaufen",
+    "en": "Something went wrong"
+  },
+  "toast_cannot_delete_yourself": {
+    "af": "Jy kan nie jouself verwyder nie ",
+    "de": "Du kannst dich nicht selber löschen",
+    "en": "You cannot delete yourself"
+  },
+  "toast_user_deleted": {
+    "af": "Die gebruiker is verwyder ",
+    "de": "Der nutzer wurde gelöscht",
+    "en": "The user has been deleted"
+  },
+  "toast_no_permissions_view_page": {
+    "af": "Jy het nie die regte nie om hierdie blad te beskou nie",
+    "de": "Du hast nicht die Berechtigung um auf diese Seite zuzugreifen",
+    "en": "You do not have the permissions to view this page"
+  },
+  "toast_user_not_found": {
+    "af": "Die gebruiker word nie gevind nie",
+    "de": "Der Nutzer konnte nicht gefunden werden",
+    "en": "The User could not be found"
+  },
+  "toast_logged_out": {
+    "af": "Jy is suksesviol abgemeld",
+    "de": "Du wurdest erfolgreich abgemeldet",
+    "en": "You have been signed out successfully"
+  },
+  "toast_home_stats": {
+    "af": "Iets het verkeerd gegaan die statistieke te haal",
+    "de": "Da ist was mit dem holen der Statistiken schiefgelaufen",
+    "en": "Something went wrong fetching the stats"
+  },
+
+  "toast_error_profile": {
+    "af": "Iets het verkeerd gegaan met you profiel",
+    "de": "Da ist etwas mit deinem  Profil schiefgelaufen",
+    "en": "Something went wrong with your profile"
+  },
+
+  "toast_profile_update": {
+    "af": "Die profiel is opgedateer ",
+    "de": "Das Profil wurde aktualisiert",
+    "en": "The Profile has been updated"
+  },
+  "toast_passwords_do_not_match": {
+    "af": "Die wagwoorde pas nie saam nie ",
+    "de": "Die Passwörter stimmen nicht überein",
+    "en": "The Passwords do not match"
+  },
+  "toast_check_email": {
+    "af": "Aseblief kyk na jou epos ",
+    "de": "Bitte kontroliere deine Email",
+    "en": "Please check your Email"
+  },
+
+  "toast_fill_in_all_fields": {
+    "af": "Aseblief vul in alle velde",
+    "de": "Bitte alle Felder ausfüllen",
+    "en": "Please fill in all fields"
+  },
+  "toast_successful_login": {
+    "af": " Welkom terug!",
+    "de": " Willkommen zurück!",
+    "en": " Welcome back!"
+  },
+  "toast_wrong_password": {
+    "af": "Jou epos en/of wagwoord is verkeerd",
+    "de": "Deine Email und/oder Passwort ist falsch",
+    "en": "Your Email and/or Password are wrong"
+  },
+  "toast_successful_register": {
+    "af": "Welkom by ViLix ",
+    "de": "Wilkommen bei ViLix ",
+    "en": "Welcome to ViLix"
+  },
+
+  "toast_login_again": {
+    "af": "Aseblief teeken wir in ",
+    "de": "Bitte log wwieder ein",
+    "en": "Please log in again"
+  },
+  "toast_no_permissions_view_fmea": {
+    "af": "Jy het nie die regte nie om hierdie FMEA te beskou nie",
+    "de": "Du hast nicht die Berechtigung um auf diese FMEA zuzugreifen",
+    "en": "You do not have the permissions to view this FMEA"
+  },
+  "toast_FMEA_deleted": {
+    "af": "Die FMEA is verwyder ",
+    "de": "Die FMEA wurde gelöscht",
+    "en": "The FMEA has been deleted"
+  },
+  "toast_fmea_created": {
+    "af": "Die FMEA is geskep",
+    "de": "Die FMEA wurde erstellt",
+    "en": "The FMEA has been created"
+  },
+  "toast_fmea_already_created": {
+    "af": "Die FMEA is reeds een keer geskep",
+    "de": "Die FMEA wurde schon einmal erstellt",
+    "en": "The FMEA has been already been created"
+  },
+
+  "toast_fmea_update": {
+    "af": "Die FMEA is opgedateer ",
+    "de": "Die FMEA wurde aktualisiert",
+    "en": "The FMEA has been updated"
+  },
+  "toast_fmea_already_update": {
+    "af": "Die FMEA is reeds een keer opgedateer",
+    "de": "Die FMEA wurde bereits aktualisiert",
+    "en": "The FMEA has already been updated"
+  },
+  "toast_fmea_not_found": {
+    "af": "Die FMEA word nie gevind nie ",
+    "de": "Die FMEA wurde nicht gefunden",
+    "en": "The FMEA could not be found"
+  },
+  "toast_password_reset": {
+    "af": "Jou wagwoord is teruggestel",
+    "de": "Das Passwort wurde zurückgesetzt",
+    "en": "The Password has been reset"
+  },
+  "toast_email_not_found": {
+    "af": "Jou epos kann nie gevind word nie. Asseblif registreer",
+    "de": "Deine Email konnte nicht gefunden werden. Bitte registriere dich",
+    "en": "Your Email could not be found. Please register"
+  },
+  "toast_already_registered": {
+    "af": "Jy is reeds registreer ",
+    "de": "Du bist bereits registriert",
+    "en": "You are already registered"
+  },
+  "gradinghelp_help_with_grading": {
+    "af": "Hulp met Gradering ",
+    "de": "Hilfe bei der Bewertung ",
+    "en": "Help with grading "
+  },
+  "gradinghelp_rank": {
+    "af": "Rang",
+    "de": "Rang",
+    "en": "Rank"
+  },
+  "gradinghelp_meaning": {
+    "af": "Betekening",
+    "de": "Bedeutung",
+    "en": "Meaning"
+  },
+  "modal_close": {
+    "af": "Toemaak",
+    "de": "Schließen",
+    "en": "Close"
+  },
+  "modal_delete": {
+    "af": "Verwyder",
+    "de": "Löschen",
+    "en": "Delete"
+  },
+  "actionbutton_view": {
+    "af": "Beskou",
+    "de": "Anzeigen",
+    "en": "View"
+  },
+  "actionbutton_edit": {
+    "af": "Verwerk",
+    "de": "Bearbeiten",
+    "en": "Edit"
+  },
+  "actionbutton_delete": {
+    "af": "Verwyder",
+    "de": "Löschen",
+    "en": "Delete"
+  },
+  "table_are_you_sure_user": {
+    "af": "Is jy seker dat jy hierdie gebruiker will verwyder",
+    "de": "Bist du sicher dass du diesen Benutzer löschen wilst?",
+    "en": "Are you sure you want to delete this User?"
+  },
+  "table_are_you_sure_fmea": {
+    "af": "Is jy seker dat jy hierdie FMEA will verwyder",
+    "de": "Bist du sicher dass du diese FMEA löschen wilst?",
+    "en": "Are you sure you want to delete this FMEA?"
+  },
+  "table_delete_user_message_part_one": {
+    "af": "Jy is op die punt om hierdie Gebruiker en alle gepaardgaande data te verwyder .",
+    "de": "Du sind im Begriff, diesen Benutzer und alle dazugehörigen Daten zu löschen. ",
+    "en": "You are about to delete this User and all the data that pertains to it. "
+  },
+  "table_delete_fmea_message_part_one": {
+    "af": "Jy is op die punt om hierdie FMEA -verslag en alle gepaardgaande data te verwyder .",
+    "de": "Du sind im Begriff, diesen FMEA-Bericht und alle dazugehörigen Daten zu löschen. ",
+    "en": "You are about to delete this FMEA report and all the data that pertains to it. "
+  },
+  "table_delete_user_message_part_two": {
+    "af": "Let asseblief daarop dat hierdie aksie permanent is en nie ongedaan gemaak kan word nie.",
+    "de": "Bitte beachte, dass diese Aktion dauerhaft ist und nicht rückgängig gemacht werden kann.",
+    "en": "Please note that this action is permanent and cannot be undone"
+  },
+  "table_delete_fmea_message_part_two": {
+    "af": "Let asseblief daarop dat hierdie aksie permanent is en nie ongedaan gemaak kan word nie.",
+    "de": "Bitte beachte, dass diese Aktion dauerhaft ist und nicht rückgängig gemacht werden kann.",
+    "en": "Please note that this action is permanent and cannot be undone"
+  },
+  "role_user": {
+    "af": "Gebruiker",
+    "de": "Benutzer",
+    "en": "User"
+  },
+  "role_admin": {
+    "af": "Admin",
+    "de": "Admin",
+    "en": "Admin"
+  },
+  "role_superadmin": {
+    "af": "Superadmin",
+    "de": "Superadmin",
+    "en": "Superadmin"
+  },
+  "status_complete": {
+    "af": "Volledig",
+    "de": "Vollständig",
+    "en": "Complete"
+  },
+  "status_incomplete": {
+    "af": "Onvolledig",
+    "de": "Unvollständig",
+    "en": "Incomplete"
+  },
+  "verdict_verdict": {
+    "af": "Evaluering",
+    "de": "Bewertung",
+    "en": "Assessment"
+  },
+  "verdict_with_an_rpn_part_one": {
+    "af": "Met 'n RPN van ",
+    "de": "Mit einer RPZ von ",
+    "en": "With an RPN of "
+  },
+  "verdict_with_an_rpn_part_two": {
+    "af": " moet die volgende opgemerk word",
+    "de": " ist folgendes zu beachten",
+    "en": " the following is to be noted"
+  },
+  "verdict_failure_risk": {
+    "af": "Risiko van mislukking",
+    "de": "Fehlerrisiko",
+    "en": "Risk of failure"
+  },
+  "verdict_need_for_action": {
+    "af": "Behoefte aan aksie",
+    "de": "Handlungsbedarf",
+    "en": "Need for action"
+  },
+  "verdict_measures": {
+    "af": "Maatreëls",
+    "de": "Maßnahmen",
+    "en": "Measures"
+  }
+}

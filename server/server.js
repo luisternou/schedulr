@@ -52,8 +52,7 @@ const swaggerOptions = {
       },
     ],
   },
-  //apis: ["./docs/users.docs.js", "./docs/fmea.docs.js"],
-  apis: ["./docs/ schedule.doc.js"],
+  apis: ["./docs/users.docs.js", "./docs/schedule.docs.js"],
 };
 
 const swaggerDocs = swaggerjsdoc(swaggerOptions);

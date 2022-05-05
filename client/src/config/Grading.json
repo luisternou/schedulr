@@ -1,0 +1,182 @@
+[
+  {
+    "rank": 1,
+    "severity": {
+      "af": "Die kliënt sal waarskynlik niks agterkom nie",
+      "de": "Der Kunde wird höchstwahrscheinlich nichts bemerken",
+      "en": "Customer will most likely not notice anything"
+    },
+    "occurrence": {
+      "af": "Mislukking onwaarskynlik",
+      "de": "Ausfall unwahrscheinlich",
+      "en": "Failure unlikely"
+    },
+    "detection": {
+      "af": "Huidige Beheer is byna seker om foute op te spoor",
+      "de": "Aktuelle Maßnahmen erkennen mit ziemlicher Sicherheit den Ausfall",
+      "en": "Current controls almost certain to detect failure"
+    }
+  },
+  {
+    "rank": 2,
+    "severity": {
+      "af": "Die Kliënt kan baie geringe ergernisse opmerk",
+      "de": "Der Kunde könnte sehr kleine Ärgernisse bemerken",
+      "en": "Customer might notice very minor annoyances"
+    },
+    "occurrence": {
+      "af": "Slegs geïsoleerde mislukkings is 1:150K",
+      "de": "Nur vereinzelte Ausfälle vorhanden 1:150K",
+      "en": "Only isolated failures present 1:150K"
+    },
+    "detection": {
+      "af": "Huidige Beheer is byna seker om foute op te spoor",
+      "de": "Aktuelle Maßnahmen erkennen mit ziemlicher Sicherheit den Ausfall",
+      "en": "Current controls almost certain to detect failure"
+    }
+  },
+  {
+    "rank": 3,
+    "severity": {
+      "af": "Die Kliënt kan baie geringe ergernisse opmerk",
+      "de": "Der Kunde könnte kleinere Unannehmlichkeiten bemerken",
+      "en": "Customer might notice very minor annoyances"
+    },
+    "occurrence": {
+      "af": "Geïsoleerde mislukkings is 1:30K",
+      "de": "Vereinzelte Ausfälle vorhanden 1:30K",
+      "en": "Isolated failures present 1:30K"
+    },
+    "detection": {
+      "af": "Die Beheer het 'n baie goeie kans om die mislukking op te spoor",
+      "de": "Die Maßnahmen haben eine sehr gute Chance, den Ausfall zu erkennen",
+      "en": "Controls have a very good chance of detecting the Failure"
+    }
+  },
+  {
+    "rank": 4,
+    "severity": {
+      "af": "Die kliënt sal agteruitgang sien wat ontevredenheid kan veroorsaak en moontlik ongeskeduleerde herstelwerk benodig",
+      "de": "Der Kunde wird eine Verschlechterung feststellen, die zu Unzufriedenheit führen kann und möglicherweise außerplanmäßige Reparaturen erfordert.",
+      "en": "Customer will notice deterioration which could cause dissatisfaction and may require unscheduled repairs"
+    },
+    "occurrence": {
+      "af": "Geïsoleerde mislukkings is 1:4500",
+      "de": "Vereinzelte Ausfälle vorhanden 1:4500",
+      "en": "Isolated failures present 1:4500"
+    },
+    "detection": {
+      "af": "Beheer het 'n goeie kans om die mislukking op te spoor",
+      "de": "Die Maßnahmen haben eine gute Chance, den Ausfall zu erkennen",
+      "en": "Controls have a good chance of detecting the Failure"
+    }
+  },
+  {
+    "rank": 5,
+    "severity": {
+      "af": "Die kliënt sal agteruitgang sien wat ontevredenheid kan veroorsaak en moontlik ongeskeduleerde herstelwerk benodig",
+      "de": "Der Kunde wird eine Verschlechterung feststellen, die zu Unzufriedenheit führen kann und möglicherweise außerplanmäßige Reparaturen erfordert.",
+      "en": "Customer will notice deterioration which could cause dissatisfaction and may require unscheduled repairs"
+    },
+    "occurrence": {
+      "af": "Geïsoleerde mislukkings is 1:1800",
+      "de": "Vereinzelte Ausfälle vorhanden 1:1800",
+      "en": "Isolated failures present 1:1800"
+    },
+    "detection": {
+      "af": "Beheer kan die mislukking opspoor",
+      "de": "Die Maßnahmen können den Ausfall erkennen",
+      "en": "Controls may detect the Failure"
+    }
+  },
+  {
+    "rank": 6,
+    "severity": {
+      "af": "Die kliënt sal agteruitgang sien wat ontevredenheid kan veroorsaak en moontlik ongeskeduleerde herstelwerk benodig",
+      "de": "Der Kunde wird eine Verschlechterung feststellen, die zu Unzufriedenheit führen kann und möglicherweise außerplanmäßige Reparaturen erfordert.",
+      "en": "Customer will notice deterioration which could cause dissatisfaction and may require unscheduled repairs"
+    },
+    "occurrence": {
+      "af": "Af en toe mislukkings in geen groot verhouding 1: 150",
+      "de": "Gelegentliche Ausfälle ohne größere Ausmaße 1:150",
+      "en": "Occasional failures in no major proportions 1:150"
+    },
+    "detection": {
+      "af": "Beheer kan die mislukking opspoor",
+      "de": "Die Maßnahmen können den Ausfall erkennen",
+      "en": "The controls may detect the Failure"
+    }
+  },
+  {
+    "rank": 7,
+    "severity": {
+      "af": "Die voorwerp is onbruikbaar, maar hou geen veiligheidsrisiko's in nie. Kan ernstige verswakking veroorsaak",
+      "de": "Das Objekt ist funktionsunfähig, birgt aber keine Sicherheitsrisiken. Kann schwerwiegende Beeinträchtigungen verursachen",
+      "en": "The item is inoperable but does not prone any safety risks. May cause serious disruptions"
+    },
+    "occurrence": {
+      "af": "Af en toe mislukkings in geen groot verhouding nie 1:50",
+      "de": "Gelegentliche Ausfälle ohne größere Ausmaße 1:50",
+      "en": "Occasional failures in no major proportions 1:50"
+    },
+    "detection": {
+      "af": "Die Beheer het 'n swak kans om die mislukking op te spoor",
+      "de": "Maßnahmen haben eine geringe Chance, den Ausfall zu entdecken",
+      "en": "Controls have a poor chance of detecting the Failure"
+    }
+  },
+  {
+    "rank": 8,
+    "severity": {
+      "af": "Die voorwerp is onbruikbaar, maar hou geen veiligheidsrisiko's in nie. Kan ernstige verswakking veroorsaak",
+      "de": "Der Gegenstand ist funktionsunfähig, birgt aber keine Sicherheitsrisiken. Kann schwerwiegende Beeinträchtigungen verursachen",
+      "en": "The item is inoperable but does not prone any safety risks. May cause serious disruptions"
+    },
+    "occurrence": {
+      "af": "Mislukking kom gereeld 1: 9 voor",
+      "de": "Ausfall kommt häufig vor 1:9",
+      "en": "Failure occurs often 1:9"
+    },
+    "detection": {
+      "af": "Die Beheer het 'n swak kans om die mislukking op te spoor",
+      "de": "Maßnahmen haben eine geringe Chance, den Ausfall zu entdecken",
+      "en": "Controls have a poor chance of detecting the Failure"
+    }
+  },
+  {
+    "rank": 9,
+    "severity": {
+      "af": "(Met waarskuwing) Die veiligheid of regulasies word geraak. Kan die operateur in gevaar stel.",
+      "de": "(Mit Warnung) Sicherheit oder Vorschriften sind betroffen. Kann den Bediener gefährden.",
+      "en": "(With warning) Safety or regulations are affected. Can endanger operatorg"
+    },
+    "occurrence": {
+      "af": "Mislukking kom gereeld 1: 6 voor",
+      "de": "Ausfall kommt häufig vor 1:6",
+      "en": "Failure occurs often 1:6"
+    },
+    "detection": {
+      "af": "Beheer sal die mislukking byna beslis nie opspoor nie",
+      "de": "Die Maßnahmen werden mit ziemlicher Sicherheit den Ausfall nicht erkennen",
+      "en": "Controls will almost certainly not detect the Failure"
+    }
+  },
+  {
+    "rank": 10,
+    "severity": {
+      "af": "(Sonder waarskuwing) Die veiligheid of regulasies word geraak. Kan die operateur in gevaar stel",
+      "de": "(Ohne Warnung) Sicherheit oder Vorschriften sind betroffen. Kann den Bediener gefährden",
+      "en": "(Without warning) Safety or regulations are affected. Can endanger operator"
+    },
+    "occurrence": {
+      "af": "Failure almost inevitable 1:3",
+      "de": "Ausfall fast unvermeidlich 1:3",
+      "en": "Failure almost inevitable 1:3"
+    },
+    "detection": {
+      "af": "Beheer sal nie die mislukking opspoor nie, of daar bestaan nie sulke Beheer nie ",
+      "de": "Die Maßnahmen werden den Ausfall nicht aufdecken oder es gibt keine solchen Maßnahmen.",
+      "en": "Controls will not detect the Failure or no such controls exist"
+    }
+  }
+]
