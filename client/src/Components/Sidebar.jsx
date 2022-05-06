@@ -76,7 +76,7 @@ function Sidebar({ history }) {
             className="md:block text-left md:pb-2 text-black-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
-            ViLix FMEA Suite
+            KirEx Scheduler
           </Link>
 
           <ul className="md:hidden items-center flex flex-wrap list-none">
@@ -101,7 +101,7 @@ function Sidebar({ history }) {
                     className="md:block text-left md:pb-2 text-gray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
                     to="/"
                   >
-                    Vilix FMEA Suite
+                    KirEx Scheduler
                   </Link>
                 </div>
                 <div className="w-6/12 flex justify-end">
@@ -115,7 +115,7 @@ function Sidebar({ history }) {
                 </div>
               </div>
             </div>
-     
+
             <form
               onSubmit={(e) => {
                 e.preventDefault();

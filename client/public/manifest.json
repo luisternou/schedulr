@@ -1,12 +1,12 @@
 {
   "dir": "auto",
   "display": "standalone",
-  "name": "ViLix",
-  "short_name": "ViLix",
+  "name": "KirEx",
+  "short_name": "KirEx",
   "scope": "/",
   "start_url": "/",
   "lang": "en",
-  "description": "An FMEA Suite",
+  "description": "A Shift planning tool",
   "theme_color": "#efefef",
   "background_color": "#efefef",
   "icons": [

@@ -1,28 +1,28 @@
 {
   "homepage_total_fmeas_submitted": {
-    "af": "Hele Antal geskepte FMEAs",
-    "de": "Anzahl aller erstellten FMEAs",
-    "en": "Total number of FMEAs submitted"
+    "af": "Hele Antal geskepte Shifts",
+    "de": "Anzahl aller erstellten Shifts",
+    "en": "Total number of Shifts submitted"
   },
   "homepage_total_you_fmeas_submitted": {
-    "af": "Antal van jou geskepte FMEAS",
-    "de": "Anzahl der von dir erstellten FMEAs",
-    "en": "Amount of FMEAs submitted by you"
+    "af": "Antal van jou geskepte ShiftS",
+    "de": "Anzahl der von dir erstellten Shifts",
+    "en": "Amount of Shifts submitted by you"
   },
   "homepage_total_fmeas_submitted_lastmonth": {
-    "af": "Verlede maand geskepte FMEAs",
-    "de": "Im letzten Monat erstellten FMEAS",
-    "en": "FMEAs created in the last Month"
+    "af": "Verlede maand geskepte Shifts",
+    "de": "Im letzten Monat erstellten ShiftS",
+    "en": "Shifts created in the last Month"
   },
   "homepage_total_you_fmeas_last_month": {
-    "af": "FMEAs van jou verlede maand geskep",
-    "de": "FMEAs von dir im letzen Monat erstellt ",
-    "en": "FMEAs submitted by you last month"
+    "af": "Shifts van jou verlede maand geskep",
+    "de": "Shifts von dir im letzen Monat erstellt ",
+    "en": "Shifts submitted by you last month"
   },
   "homepage_table_my_latest_fmeas": {
-    "af": "My nuutste FMEAs",
-    "de": "Meine neuesten FMEAs",
-    "en": "My latest FMEAs"
+    "af": "My nuutste Shifts",
+    "de": "Meine neuesten Shifts",
+    "en": "My latest Shifts"
   },
   "homepage_table_see_all": {
     "af": "Wys alles",
@@ -52,25 +52,25 @@
   },
 
   "homepage_table_no_fmeas": {
-    "af": "Jy het nog geen FMEAs geskep",
-    "de": "Du hast noch keine FMEAs erstellt",
-    "en": "You have not submitted any FMEAs"
+    "af": "Jy het nog geen Shifts geskep",
+    "de": "Du hast noch keine Shifts erstellt",
+    "en": "You have not submitted any Shifts"
   },
 
   "homepage_welcome_to_name": {
-    "af": "Welkom by ViLix ",
-    "de": "Willkommen bei ViLix ",
-    "en": "Welcome to ViLix "
+    "af": "Welkom by KirEx ",
+    "de": "Willkommen bei KirEx ",
+    "en": "Welcome to KirEx "
   },
   "homepage_welcome_explanation_part_one": {
-    "af": "Welkom by die ViLix FMEA suite, hier kann jy jou ",
-    "de": "Willkommen bei der ViLix FMEA Suite. Hier können Sie Ihre ",
-    "en": "Welcome to the ViLix FMEA suite. Here you can submit and manage your FMEAs"
+    "af": "Welkom by die KirEx Shift suite, hier kann jy jou ",
+    "de": "Willkommen bei der KirEx Shift Suite. Hier können Sie Ihre ",
+    "en": "Welcome to the KirEx Shift suite. Here you can submit and manage your Shifts"
   },
   "homepage_welcome_explanation_part_two": {
-    "af": "FMEAs indien en bestuur",
-    "de": " FMEAs einreichen und verwalten.",
-    "en": "FMEAs"
+    "af": "Shifts indien en bestuur",
+    "de": " Shifts einreichen und verwalten.",
+    "en": "Shifts"
   },
 
   "homepage_welcome_how_to_use": {
@@ -90,14 +90,14 @@
     "en": "Fill in the form and click Submit"
   },
   "homepage_welcome_view_all_part_one": {
-    "af": "Om alle FMEAs te sien, klik op ",
-    "de": "Um alle FMEAs zu sehen, klick auf ",
+    "af": "Om alle Shifts te sien, klik op ",
+    "de": "Um alle Shifts zu sehen, klick auf ",
     "en": "To view all your submissions, click on "
   },
   "homepage_welcome_view_all_part_two": {
-    "af": " Hier kan jy individuele FMEAs beskou, verwerk en verwyder",
-    "de": " Hier kannst du einzelne FMEAs ansehen, bearbeiten und löschen",
-    "en": " Here you can view individual FMEAs, edit them and delete them."
+    "af": " Hier kan jy individuele Shifts beskou, verwerk en verwyder",
+    "de": " Hier kannst du einzelne Shifts ansehen, bearbeiten und löschen",
+    "en": " Here you can view individual Shifts, edit them and delete them."
   },
   "homepage_welcome_improve_part_one": {
     "af": "Om verbeterings wat jy gemaak het by te voeg klick op ",
@@ -110,19 +110,25 @@
     "en": " and click on View and scroll down until you see Add improvments and click on it"
   },
   "homepage_welcome_status": {
-    "af": "As jy vir al funksies in die FMEA bygevoeg het, verander die Status von Onvolledig na Voltooi.",
-    "de": "Wenn du für alle Funktionen in der FMEA hinzugefügt hast, ändert sich der Status von Unvollständig zu Vollständig.",
-    "en": "If you added improvements to all functions in the FMEA, the status will change from Incomplete to Complete."
+    "af": "As jy vir al funksies in die Shift bygevoeg het, verander die Status von Onvolledig na Voltooi.",
+    "de": "Wenn du für alle Funktionen in der Shift hinzugefügt hast, ändert sich der Status von Unvollständig zu Vollständig.",
+    "en": "If you added improvements to all functions in the Shift, the status will change from Incomplete to Complete."
   },
   "homepage_welcome_new_fmea_link": {
-    "af": "Nuwe FMEA.",
-    "de": "Neue FMEA",
-    "en": "New FMEA"
+    "af": "Nuwe Shift.",
+    "de": "Neue Shift",
+    "en": "New Shift"
   },
   "homepage_welcome_my_fmea_link": {
-    "af": "My FMEAs",
-    "de": "Meine FMEAs",
-    "en": "My FMEAs"
+    "af": "My Shifts",
+    "de": "Meine Shifts",
+    "en": "My Shifts"
+  },
+
+  "homepage_add_new_shift": {
+    "af": "Nuwe shift",
+    "de": "Neue Schicht",
+    "en": "New shift"
   },
 
   "result_search_result": {
@@ -131,9 +137,9 @@
     "en": "Search Results"
   },
   "result_no_results": {
-    "af": "Geen FMEAs gevind met hiedie kriteria",
-    "de": "Keine FMEAs mit diesen Kriterien gefunden",
-    "en": "No FMEAs found with these criterias"
+    "af": "Geen Shifts gevind met hiedie kriteria",
+    "de": "Keine Shifts mit diesen Kriterien gefunden",
+    "en": "No Shifts found with these criterias"
   },
   "fmea_table_project": {
     "af": "projek",
@@ -172,9 +178,9 @@
   },
 
   "search_search_fmea": {
-    "af": "Soek FMEAs",
-    "de": "FMEAs durchsuchen",
-    "en": "Search FMEAs"
+    "af": "Soek Shifts",
+    "de": "Shifts durchsuchen",
+    "en": "Search Shifts"
   },
   "search_global_join": {
     "af": "Globale aansluiting",
@@ -232,26 +238,26 @@
     "en": "Search as Admin"
   },
   "myfmea_my_fmea": {
-    "af": "My FMEAs",
-    "de": "Meine FMEAs",
-    "en": "My FMEA"
+    "af": "My Shifts",
+    "de": "Meine Shifts",
+    "en": "My Shift"
   },
   "myfmea_no_fmea": {
-    "af": "Jy het nog geen FMEAs geskep",
-    "de": "Du hast noch keine FMEAs erstellt",
-    "en": "You have not submitted any FMEAs"
+    "af": "Jy het nog geen Shifts geskep",
+    "de": "Du hast noch keine Shifts erstellt",
+    "en": "You have not submitted any Shifts"
   },
 
   "admin_view_all_fmea": {
-    "af": "Beskou al FMEAs",
-    "de": "Alle FMEAs ansehen",
-    "en": "View all FMEAs"
+    "af": "Beskou al Shifts",
+    "de": "Alle Shifts ansehen",
+    "en": "View all Shifts"
   },
 
   "admine_no_fmeas": {
-    "af": "Jy het nog geen FMEAs geskep",
-    "de": "Du hast noch keine FMEAs erstellt",
-    "en": "You have not submitted any FMEAs"
+    "af": "Jy het nog geen Shifts geskep",
+    "de": "Du hast noch keine Shifts erstellt",
+    "en": "You have not submitted any Shifts"
   },
 
   "users_users": {
@@ -275,25 +281,25 @@
     "en": "Actions"
   },
   "newfmea_new_fmea": {
-    "af": "Skep 'n nuwe FMEA",
-    "de": "Neue FMEA erstellen",
-    "en": "Create new FMEA"
+    "af": "Skep 'n nuwe Shift",
+    "de": "Neue Shift erstellen",
+    "en": "Create new Shift"
   },
 
   "fmea_fmea_type": {
-    "af": "FMEA tipe",
-    "de": "FMEA Art",
-    "en": "FMEA Type"
+    "af": "Shift tipe",
+    "de": "Shift Art",
+    "en": "Shift Type"
   },
   "fmea_design_fmea": {
-    "af": "Ontwerp-FMEA",
-    "de": "Design-FMEA",
-    "en": "Design FMEA"
+    "af": "Ontwerp-Shift",
+    "de": "Design-Shift",
+    "en": "Design Shift"
   },
   "fmea_process_fmea": {
-    "af": "Proses-FMEA",
-    "de": "Prozess-FMEA",
-    "en": "Process-FMEA"
+    "af": "Proses-Shift",
+    "de": "Prozess-Shift",
+    "en": "Process-Shift"
   },
   "fmea_project_name": {
     "af": "Projeknaam",
@@ -402,9 +408,9 @@
   },
 
   "viewfmea_view_fmea": {
-    "af": "Beskou FMEA",
-    "de": "FMEA anzeigen",
-    "en": "View FMEA"
+    "af": "Beskou Shift",
+    "de": "Shift anzeigen",
+    "en": "View Shift"
   },
   "viewfmea_control": {
     "af": "Beheer",
@@ -412,9 +418,9 @@
     "en": "Measures"
   },
   "viewfmea_edit_fmea": {
-    "af": "Verwerk hierdie FMEA",
-    "de": "FMEA bearbeiten",
-    "en": "Edit FMEA"
+    "af": "Verwerk hierdie Shift",
+    "de": "Shift bearbeiten",
+    "en": "Edit Shift"
   },
   "viewfmea_add_improvements": {
     "af": "Voeg verbeterings by",
@@ -457,9 +463,9 @@
     "en": "Submitted by "
   },
   "generatepdf_fmea_report": {
-    "af": "FMEA verslag ",
-    "de": "FMEA Bericht ",
-    "en": "FMEA report "
+    "af": "Shift verslag ",
+    "de": "Shift Bericht ",
+    "en": "Shift report "
   },
   "generatepdf_functions_on_following_page": {
     "af": "Funksies is op volgende bladsy ",
@@ -478,14 +484,14 @@
   },
 
   "editfmea_edit_fmea": {
-    "af": "Verwerk FMEA",
-    "de": "FMEA bearbeiten",
-    "en": "Edit FMEA"
+    "af": "Verwerk Shift",
+    "de": "Shift bearbeiten",
+    "en": "Edit Shift"
   },
   "improvefmea_improve_fmea": {
-    "af": "Voeg FMEA verbeterings by",
-    "de": "FMEA Verbesserungen hinzufügen",
-    "en": "Add FMEA Improvments"
+    "af": "Voeg Shift verbeterings by",
+    "de": "Shift Verbesserungen hinzufügen",
+    "en": "Add Shift Improvments"
   },
   "improvefmea_improvements_made": {
     "af": "Verbeterings gemaak",
@@ -698,9 +704,9 @@
     "en": "User"
   },
   "toast_delete_fmea": {
-    "af": "Die FMEA is verwyder ",
-    "de": "Die FMEA wurde gelöscht",
-    "en": "The FMEA has been deleted"
+    "af": "Die Shift is verwyder ",
+    "de": "Die Shift wurde gelöscht",
+    "en": "The Shift has been deleted"
   },
   "toast_something_went_wrong": {
     "af": "Iets het verkeerd gegaan ",
@@ -776,9 +782,9 @@
     "en": "Your Email and/or Password are wrong"
   },
   "toast_successful_register": {
-    "af": "Welkom by ViLix ",
-    "de": "Wilkommen bei ViLix ",
-    "en": "Welcome to ViLix"
+    "af": "Welkom by KirEx ",
+    "de": "Wilkommen bei KirEx ",
+    "en": "Welcome to KirEx"
   },
 
   "toast_login_again": {
@@ -787,40 +793,40 @@
     "en": "Please log in again"
   },
   "toast_no_permissions_view_fmea": {
-    "af": "Jy het nie die regte nie om hierdie FMEA te beskou nie",
-    "de": "Du hast nicht die Berechtigung um auf diese FMEA zuzugreifen",
-    "en": "You do not have the permissions to view this FMEA"
+    "af": "Jy het nie die regte nie om hierdie Shift te beskou nie",
+    "de": "Du hast nicht die Berechtigung um auf diese Shift zuzugreifen",
+    "en": "You do not have the permissions to view this Shift"
   },
-  "toast_FMEA_deleted": {
-    "af": "Die FMEA is verwyder ",
-    "de": "Die FMEA wurde gelöscht",
-    "en": "The FMEA has been deleted"
+  "toast_Shift_deleted": {
+    "af": "Die Shift is verwyder ",
+    "de": "Die Shift wurde gelöscht",
+    "en": "The Shift has been deleted"
   },
   "toast_fmea_created": {
-    "af": "Die FMEA is geskep",
-    "de": "Die FMEA wurde erstellt",
-    "en": "The FMEA has been created"
+    "af": "Die Shift is geskep",
+    "de": "Die Shift wurde erstellt",
+    "en": "The Shift has been created"
   },
   "toast_fmea_already_created": {
-    "af": "Die FMEA is reeds een keer geskep",
-    "de": "Die FMEA wurde schon einmal erstellt",
-    "en": "The FMEA has been already been created"
+    "af": "Die Shift is reeds een keer geskep",
+    "de": "Die Shift wurde schon einmal erstellt",
+    "en": "The Shift has been already been created"
   },
 
   "toast_fmea_update": {
-    "af": "Die FMEA is opgedateer ",
-    "de": "Die FMEA wurde aktualisiert",
-    "en": "The FMEA has been updated"
+    "af": "Die Shift is opgedateer ",
+    "de": "Die Shift wurde aktualisiert",
+    "en": "The Shift has been updated"
   },
   "toast_fmea_already_update": {
-    "af": "Die FMEA is reeds een keer opgedateer",
-    "de": "Die FMEA wurde bereits aktualisiert",
-    "en": "The FMEA has already been updated"
+    "af": "Die Shift is reeds een keer opgedateer",
+    "de": "Die Shift wurde bereits aktualisiert",
+    "en": "The Shift has already been updated"
   },
   "toast_fmea_not_found": {
-    "af": "Die FMEA word nie gevind nie ",
-    "de": "Die FMEA wurde nicht gefunden",
-    "en": "The FMEA could not be found"
+    "af": "Die Shift word nie gevind nie ",
+    "de": "Die Shift wurde nicht gefunden",
+    "en": "The Shift could not be found"
   },
   "toast_password_reset": {
     "af": "Jou wagwoord is teruggestel",
@@ -883,9 +889,9 @@
     "en": "Are you sure you want to delete this User?"
   },
   "table_are_you_sure_fmea": {
-    "af": "Is jy seker dat jy hierdie FMEA will verwyder",
-    "de": "Bist du sicher dass du diese FMEA löschen wilst?",
-    "en": "Are you sure you want to delete this FMEA?"
+    "af": "Is jy seker dat jy hierdie Shift will verwyder",
+    "de": "Bist du sicher dass du diese Shift löschen wilst?",
+    "en": "Are you sure you want to delete this Shift?"
   },
   "table_delete_user_message_part_one": {
     "af": "Jy is op die punt om hierdie Gebruiker en alle gepaardgaande data te verwyder .",
@@ -893,9 +899,9 @@
     "en": "You are about to delete this User and all the data that pertains to it. "
   },
   "table_delete_fmea_message_part_one": {
-    "af": "Jy is op die punt om hierdie FMEA -verslag en alle gepaardgaande data te verwyder .",
-    "de": "Du sind im Begriff, diesen FMEA-Bericht und alle dazugehörigen Daten zu löschen. ",
-    "en": "You are about to delete this FMEA report and all the data that pertains to it. "
+    "af": "Jy is op die punt om hierdie Shift -verslag en alle gepaardgaande data te verwyder .",
+    "de": "Du sind im Begriff, diesen Shift-Bericht und alle dazugehörigen Daten zu löschen. ",
+    "en": "You are about to delete this Shift report and all the data that pertains to it. "
   },
   "table_delete_user_message_part_two": {
     "af": "Let asseblief daarop dat hierdie aksie permanent is en nie ongedaan gemaak kan word nie.",

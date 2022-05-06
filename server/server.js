@@ -8,6 +8,7 @@ const swaggerjsdoc = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
 
 // use monogoose to connect to mongodb
+console.log(process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -52,14 +53,14 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ["./docs/users.docs.js", "./docs/schedule.docs.js"],
+  apis: ["./docs/users.docs.js", "./docs/shift.docs.js"],
 };
 
 const swaggerDocs = swaggerjsdoc(swaggerOptions);
 app.use("/apidocs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 app.use("/api/v1/user", require("./routes/user.route"));
-app.use("/api/v1/schedule", require("./routes/schedule.route"));
+app.use("/api/v1/shift", require("./routes/shift.route"));
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 // display database connection

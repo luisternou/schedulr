@@ -12,7 +12,7 @@ import Sidebar from "../../Components/Sidebar";
 import Footer from "../../Components/Footer";
 import SubmitButton from "../../Components/SubmitButton";
 import languageData from "../../config/Languages.json";
-const EditSchedule = ({ match, history }) => {
+const EditShift = ({ match, history }) => {
   const currentUser = getUserId("user");
   const [showModal, setShowModal] = React.useState(false);
   const [functions, setfunctions] = useState([]);
@@ -35,7 +35,7 @@ const EditSchedule = ({ match, history }) => {
       const token = getCookie("token");
 
       axios
-        .get(`${process.env.REACT_APP_API_URL}/schedule/${id}`, {
+        .get(`${process.env.REACT_APP_API_URL}/shift/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -52,7 +52,7 @@ const EditSchedule = ({ match, history }) => {
             description,
           });
 
-          fetch(`${process.env.REACT_APP_API_URL}/schedule/${id}`, {
+          fetch(`${process.env.REACT_APP_API_URL}/shift/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -95,7 +95,7 @@ const EditSchedule = ({ match, history }) => {
 
       axios
         .put(
-          `${process.env.REACT_APP_API_URL}/schedule/${id}`,
+          `${process.env.REACT_APP_API_URL}/shift/${id}`,
           {
             date,
             startTime,
@@ -307,4 +307,4 @@ const EditSchedule = ({ match, history }) => {
   );
 };
 
-export default EditSchedule;
+export default EditShift;

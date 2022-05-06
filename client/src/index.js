@@ -14,11 +14,11 @@ import EditUser from "./screens/SuperAdmin/EditUser";
 import ForgetPassword from "./screens/Auth/ForgetPassword";
 import ResetPassword from "./screens/Auth/ResetPassword";
 
-// schedule imports
-import NewSchedule from "./screens/Schedule/NewSchedule";
-import ViewSchedule from "./screens/Schedule/ViewSchedule";
-import EditSchedule from "./screens/Schedule/EditSchedule";
-import MySchedule from "./screens/Schedule/MySchedule";
+// shift imports
+import NewShift from "./screens/Shift/NewShift";
+import ViewShift from "./screens/Shift/ViewShift";
+import EditShift from "./screens/Shift/EditShift";
+import MyShift from "./screens/Shift/MyShift";
 
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import AdminRoute from "./Routes/AdminRoute";
@@ -47,18 +47,10 @@ ReactDOM.render(
         render={(props) => <ResetPassword {...props} />}
       />
       <ProtectedRoute path="/profile" exact component={Profile} />
-      <ProtectedRoute path="/schedule/new" exact component={NewSchedule} />
-      <ProtectedRoute
-        path="/schedule/view/:id"
-        exact
-        component={ViewSchedule}
-      />
-      <ProtectedRoute
-        path="/schedule/view/:id/edit"
-        exact
-        component={EditSchedule}
-      />
-      <ProtectedRoute path="/schedule/my" exact component={MySchedule} />
+      <ProtectedRoute path="/shift/new" exact component={NewShift} />
+      <ProtectedRoute path="/shift/view/:id" exact component={ViewShift} />
+      <ProtectedRoute path="/shift/view/:id/edit" exact component={EditShift} />
+      <ProtectedRoute path="/shift/my" exact component={MyShift} />
 
       <SuperAdminRoute path="/superadmin" exact component={SuperAdmin} />
       <SuperAdminRoute

@@ -13,7 +13,7 @@ import Sidebar from "../../Components/Sidebar";
 import Footer from "../../Components/Footer";
 import SubmitButton from "../../Components/SubmitButton";
 
-const NewSchedule = (props) => {
+const NewShift = (props) => {
   const currentUser = getUserId("user");
 
   const [showModal, setShowModal] = React.useState(false);
@@ -59,7 +59,7 @@ const NewSchedule = (props) => {
 
       axios
         .post(
-          `${process.env.REACT_APP_API_URL}/schedule/new`,
+          `${process.env.REACT_APP_API_URL}/shift/new`,
           {
             userID,
             date,
@@ -278,4 +278,4 @@ const NewSchedule = (props) => {
   );
 };
 
-export default NewSchedule;
+export default NewShift;

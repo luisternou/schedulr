@@ -33,9 +33,9 @@ const ResultFMEA = ({ history, match }) => {
     // get current user id
     const currentUser = getUserId("user");
     const id = currentUser._id;
-    console.log(`${process.env.REACT_APP_API_URL}/schedule/user/${id}`);
+    console.log(`${process.env.REACT_APP_API_URL}/shift/user/${id}`);
     axios
-      .get(`${process.env.REACT_APP_API_URL}/schedule/user/${id}`, {
+      .get(`${process.env.REACT_APP_API_URL}/shift/user/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

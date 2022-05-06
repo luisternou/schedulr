@@ -10,6 +10,7 @@ import { getCookie } from "../helpers/auth";
 import { classNames } from "../helpers/Utils";
 import HomeInfo from "../Components/HomeInfo";
 import HomeCard from "../Components/HomeCard";
+import ShiftCard from "../Components/ShiftCard";
 import languageData from "../config/Languages.json";
 import "../styles/index.css";
 const Home = ({ history }) => {
@@ -116,12 +117,17 @@ const Home = ({ history }) => {
     );
   }
 
+  // create a function to redirect to the new shift page
+  const createNewShift = () => {
+    window.location.href = "/shift/new";
+  };
+
   return (
     <>
       <Sidebar />
       <ToastContainer />
       <Helmet>
-        <title>Home | ViLix</title>
+        <title>Home | KirEx</title>
       </Helmet>
       <div className="relative BackgroundImage md:ml-64 bg-black-100">
         <Navbar />
@@ -173,94 +179,46 @@ const Home = ({ history }) => {
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-10 mx-auto w-full -m-24">
-          <div className="flex flex-wrap"></div>
-          <div className="flex flex-wrap mt-4">
-            <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl">
-                <div className="rounded-t mb-0 px-4 py-3 border-0">
-                  <div className="flex flex-wrap items-center">
-                    <div className="relative w-full px-4 max-w-full flex-grow flex-1">
-                      <h3 className="font-semibold text-base text-black-700">
-                        {languageData.homepage_table_my_latest_fmeas[language]}
-                      </h3>
-                    </div>
-                    <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                      <Link
-                        to="/fmea/my"
-                        className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded-xl outline-none focus:outline-none mr-1 mb-1"
-                        style={{ transition: "all .15s ease" }}
-                      >
-                        {languageData.homepage_table_see_all[language]}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="block w-full overflow-x-auto">
-                  {/* Projects table */}
+        {/* Create a button to add a new shift */}
 
-                  {isFMEA ? (
-                    <table className="items-center w-full bg-transparent border-collapse">
-                      <thead>
-                        <tr>
-                          <th className="px-6 bg-black-50 text-black-500 align-middle border border-solid border-black-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            {languageData.homepage_table_project_name[language]}
-                          </th>
-                          <th className="px-6 bg-black-50 text-black-500 align-middle border border-solid border-black-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            {
-                              languageData.homepage_table_project_number[
-                                language
-                              ]
-                            }
-                          </th>
-                          <th className="px-6 bg-black-50 text-black-500 align-middle border border-solid border-black-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            {languageData.homepage_table_created_on[language]}
-                          </th>
-                          <th className="px-6 bg-black-50 text-black-500 align-middle border border-solid border-black-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            {languageData.homepage_table_status[language]}
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {result.map(function (fmea, index) {
-                          return (
-                            <tr key={index}>
-                              <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                                <a href={`/fmea/view/${fmea._id}`}>
-                                  {" "}
-                                  {fmea.projectName}{" "}
-                                </a>
-                              </th>
-                              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                <a href={`/fmea/view/${fmea._id}`}>
-                                  {fmea.projectNumber}
-                                </a>
-                              </td>
-                              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                <a href={`/fmea/view/${fmea._id}`}>
-                                  {convertDate(fmea.createdAt)}
-                                </a>
-                              </td>
-                              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                <a href={`/fmea/view/${fmea._id}`}>
-                                  {" "}
-                                  {statusPill(fmea.status)}{" "}
-                                </a>
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  ) : (
-                    <div className="flex justify-center">
-                      <h3>{languageData.homepage_table_no_fmeas[language]}</h3>
-                    </div>
-                  )}
+        <div className="px-4 md:px-10 mx-auto w-full -m-24">
+          <div className="flex flex-wrap mt-4">
+            <div className="w-full  mb-12 xl:mb-0 px-4">
+              {/* INSERT SHIFT CARDS HERE */}
+              <center>
+                <div className="py-4">
+                  <button
+                    className="w-11/12 py-3 mt-10 bg-gray-800 font-medium text-white uppercase rounded-lg shadow-md lg:shadow-lg 
+                    focus:outline-none hover:bg-gray-700 hover:shadow-none"
+                    onClick={createNewShift}
+                  >
+                    {languageData.homepage_add_new_shift[language]}
+                  </button>
                 </div>
-              </div>
+              </center>
+              <ShiftCard
+                message={
+                  languageData.homepage_total_you_fmeas_last_month[language]
+                }
+                stat={stats.totalLastMonthUser}
+                date={"2022-05-19"}
+                startTime={"12:00"}
+                endTime={"16:00"}
+                icon="fas fa-eye"
+                colour="bg-blue-500"
+                nextshift={true}
+              />
+              <br />
+              <ShiftCard
+                message={
+                  languageData.homepage_total_you_fmeas_last_month[language]
+                }
+                stat={stats.totalLastMonthUser}
+                icon="fas fa-eye"
+                colour="bg-blue-500"
+              />
             </div>
-            <HomeInfo languageData={languageData} language={language} />
+            {/* <HomeInfo languageData={languageData} language={language} /> */}
           </div>
           <Footer />
         </div>

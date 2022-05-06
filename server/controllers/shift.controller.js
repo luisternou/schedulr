@@ -1,9 +1,9 @@
-const Schedule = require("../models/schedule.model");
+const Shift = require("../models/shift.model");
 
 exports.createController = async (req, res) => {
   const { userID, date, startTime, endTime, duration, description } = req.body;
   console.log(req.body);
-  const newSchedule = new Schedule({
+  const newShift = new Shift({
     userID,
     date,
     startTime,
@@ -11,75 +11,75 @@ exports.createController = async (req, res) => {
     duration,
     description,
   });
-  await newSchedule.save();
+  await newShift.save();
   res.status(201).json({
-    message: "Schedule created successfully",
-    data: newSchedule,
+    message: "Shift created successfully",
+    data: newShift,
   });
 };
 
 exports.getAllController = async (req, res) => {
-  const schedules = await Schedule.find();
+  const shifts = await Shift.find();
   res.status(200).json({
-    message: "Schedules fetched successfully",
-    data: schedules,
+    message: "Shifts fetched successfully",
+    data: shifts,
   });
 };
 
 exports.getByIDController = async (req, res) => {
   const { id } = req.params;
-  const schedule = await Schedule.findById(id);
+  const shift = await Shift.findById(id);
   res.status(200).json({
-    message: "Schedule fetched successfully",
-    data: schedule,
+    message: "Shift fetched successfully",
+    data: shift,
   });
 };
 
 exports.getByUserController = async (req, res) => {
   const { id } = req.params;
-  const schedule = await Schedule.find({ userID: id });
+  const shift = await Shift.find({ userID: id });
   res.status(200).json({
-    message: "Schedule fetched successfully",
-    data: schedule,
+    message: "Shift fetched successfully",
+    data: shift,
   });
 };
 
 exports.getCountController = async (req, res) => {
-  const count = await Schedule.countDocuments();
+  const count = await Shift.countDocuments();
   res.status(200).json({
-    message: "Schedule count fetched successfully",
+    message: "Shift count fetched successfully",
     data: count,
   });
 };
 
 exports.getCountUserController = async (req, res) => {
   const { id } = req.params;
-  const count = await Schedule.countDocuments({ userID: id });
+  const count = await Shift.countDocuments({ userID: id });
   res.status(200).json({
-    message: "Schedule count fetched successfully",
+    message: "Shift count fetched successfully",
     data: count,
   });
 };
 
 exports.getNextMonthController = async (req, res) => {
-  // get all schedules for the user that have a date in the next month
+  // get all shifts for the user that have a date in the next month
   const { id } = req.params;
   const nextMonth = new Date();
   nextMonth.setMonth(nextMonth.getMonth() + 1);
-  const schedule = await Schedule.find({
+  const shift = await Shift.find({
     userID: id,
     date: { $gte: nextMonth },
   });
   res.status(200).json({
-    message: "Schedule fetched successfully",
-    data: schedule,
+    message: "Shift fetched successfully",
+    data: shift,
   });
 };
 
 exports.updateController = async (req, res) => {
   const { id } = req.params;
   const { userID, date, startTime, endTime, duration, description } = req.body;
-  const updatedSchedule = await Schedule.findByIdAndUpdate(id, {
+  const updatedShift = await Shift.findByIdAndUpdate(id, {
     userID,
     date,
     startTime,
@@ -88,16 +88,16 @@ exports.updateController = async (req, res) => {
     description,
   });
   res.status(200).json({
-    message: "Schedule updated successfully",
-    data: updatedSchedule,
+    message: "Shift updated successfully",
+    data: updatedShift,
   });
 };
 
 exports.deleteController = async (req, res) => {
   const { id } = req.params;
-  const deletedSchedule = await Schedule.findByIdAndDelete(id);
+  const deletedShift = await Shift.findByIdAndDelete(id);
   res.status(200).json({
-    message: "Schedule deleted successfully",
-    data: deletedSchedule,
+    message: "Shift deleted successfully",
+    data: deletedShift,
   });
 };

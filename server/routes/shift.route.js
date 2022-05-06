@@ -13,7 +13,7 @@ const {
   getNextMonthController,
   updateController,
   deleteController,
-} = require("../controllers/schedule.controller");
+} = require("../controllers/shift.controller");
 
 router.post("/new", createController);
 router.get("/", getAllController);

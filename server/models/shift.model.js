@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ScheduleSchema = new mongoose.Schema(
+const ShiftSchema = new mongoose.Schema(
   {
     userID: {
       type: String,
@@ -35,6 +35,6 @@ const ScheduleSchema = new mongoose.Schema(
   }
 );
 
-const Schedule = mongoose.model("Schedule", ScheduleSchema);
+const Shift = mongoose.model("Shift", ShiftSchema);
 
-module.exports = Schedule;
+module.exports = Shift;

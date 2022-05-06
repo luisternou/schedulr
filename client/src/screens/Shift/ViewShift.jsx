@@ -3,15 +3,15 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { getCookie, signout } from "../../helpers/auth";
 import { Link } from "react-router-dom";
-import Tooltip from "react-tooltip-lite";
+
 import { Helmet } from "react-helmet";
-import GenFMEAPdf from "../../Components/GenFMEAPdf";
+import moment from "moment";
 import Sidebar from "../../Components/Sidebar";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import Verdict from "../../Components/Verdict";
+
 import languageData from "../../config/Languages.json";
-const ViewSchedule = ({ history, match }) => {
+const ViewShift = ({ history, match }) => {
   const [functions, setFunctions] = useState([]);
   const [formInput, setFormInput] = useState({
     date: "",
@@ -39,7 +39,7 @@ const ViewSchedule = ({ history, match }) => {
       const token = getCookie("token");
 
       axios
-        .get(`${process.env.REACT_APP_API_URL}/schedule/${id}`, {
+        .get(`${process.env.REACT_APP_API_URL}/shift/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,7 +57,7 @@ const ViewSchedule = ({ history, match }) => {
             description,
           });
 
-          fetch(`${process.env.REACT_APP_API_URL}/schedule/${id}`, {
+          fetch(`${process.env.REACT_APP_API_URL}/shift/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -121,6 +121,18 @@ const ViewSchedule = ({ history, match }) => {
                   <div className="py-10 flex justify-center">
                     <div className="w-full max-w-lg">
                       <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full px-3">
+                          <label
+                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            htmlFor="grid-password"
+                          >
+                            {languageData.fmea_change_state[language]}
+                          </label>
+                          <p className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                            {" "}
+                            {moment(date).format("DD.MM.YYYY")}
+                          </p>
+                        </div>
                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                           <label
                             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -130,7 +142,7 @@ const ViewSchedule = ({ history, match }) => {
                           </label>
                           <p className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                             {" "}
-                            {date}
+                            {startTime}
                           </p>
                         </div>
                         <div className="w-full md:w-1/2 px-3">
@@ -142,7 +154,7 @@ const ViewSchedule = ({ history, match }) => {
                           </label>
                           <p className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                             {" "}
-                            {startTime}
+                            {endTime}
                           </p>
                         </div>
                       </div>
@@ -156,7 +168,7 @@ const ViewSchedule = ({ history, match }) => {
                           </label>
                           <p className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                             {" "}
-                            {endTime}
+                            {duration}
                           </p>
                         </div>
                         <div className="w-full px-3">
@@ -168,20 +180,6 @@ const ViewSchedule = ({ history, match }) => {
                           </label>
                           <p className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                             {" "}
-                            {duration}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap -mx-3 mb-2">
-                        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                          <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                            htmlFor="grid-city"
-                          >
-                            {languageData.fmea_created_by[language]}
-                          </label>
-                          <p className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                            {" "}
                             {description}
                           </p>
                         </div>
@@ -190,7 +188,7 @@ const ViewSchedule = ({ history, match }) => {
                       <div></div>
 
                       <Link
-                        to={`/schedule/update/${id}`}
+                        to={`/shift/update/${id}`}
                         className="rounded-lg shadow-md lg:shadow-lg w-full py-3 mt-10 bg-gray-800 font-medium text-white uppercase rounded-sm focus:outline-none hover:bg-gray-700 hover:shadow-none flex items-center justify-center"
                       >
                         <i className="fas fa-edit fa 1x w-6  -ml-2" />
@@ -212,4 +210,4 @@ const ViewSchedule = ({ history, match }) => {
   );
 };
 
-export default ViewSchedule;
+export default ViewShift;

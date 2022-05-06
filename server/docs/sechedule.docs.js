@@ -14,7 +14,7 @@
  *      properties:
  *        id:
  *          type: string
- *          description: auto-generated Schedule ID
+ *          description: auto-generated Shift ID
  *        name:
  *          type: string
  *          description: Name of the user
