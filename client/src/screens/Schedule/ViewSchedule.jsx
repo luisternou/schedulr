@@ -45,7 +45,8 @@ const ViewSchedule = ({ history, match }) => {
           },
         })
         .then((res) => {
-          const { date, startTime, endTime, duration, description } = res.data;
+          const { date, startTime, endTime, duration, description } =
+            res.data.data;
 
           setFormInput({
             ...formInput,

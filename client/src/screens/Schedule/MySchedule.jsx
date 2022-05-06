@@ -1,6 +1,7 @@
 //import React from 'react';
 import React, { useState, useEffect } from "react";
 import languageData from "../../config/Languages.json";
+import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import { getCookie, getUserId } from "../../helpers/auth";
 import Navbar from "../../Components/Navbar";
@@ -32,19 +33,28 @@ const ResultFMEA = ({ history, match }) => {
     // get current user id
     const currentUser = getUserId("user");
     const id = currentUser._id;
-    fetch(`${process.env.REACT_APP_API_URL}/schedule/user/${id}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((resp) => resp.json())
-      .then((resp) => {
-        if (resp.length > 0) {
-          setIsData(true);
-        } else {
-          setIsData(false);
-        }
-        setData(resp);
+    console.log(`${process.env.REACT_APP_API_URL}/schedule/user/${id}`);
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/schedule/user/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => {
+        // convert the date in the data object to dd.mm.yyyy
+        const data = res.data.data.map((item) => {
+          const date = new Date(item.date);
+          const day = date.getDate();
+          const month = date.getMonth() + 1;
+          const year = date.getFullYear();
+          const newDate = `${day}.${month}.${year}`;
+          return { ...item, date: newDate };
+        });
+        setIsData(true);
+        setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }, [match.params.search]);
 
@@ -129,6 +139,7 @@ const ResultFMEA = ({ history, match }) => {
       ];
     }
   }, []);
+  console.log(data);
 
   // const olddata = React.useMemo(() => getData(), [])
   return (

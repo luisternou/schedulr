@@ -5,6 +5,7 @@ import { getUserId, getCookie, signout } from "../../helpers/auth";
 import { v4 as uuidv4 } from "uuid";
 import GradingHelp from "../../Components/GradingHelp";
 import { Helmet } from "react-helmet";
+import moment from "moment";
 import "../../styles/RangeSlider.css";
 import Navbar from "../../Components/Navbar";
 import Sidebar from "../../Components/Sidebar";
@@ -34,16 +35,17 @@ const EditSchedule = ({ match, history }) => {
       const token = getCookie("token");
 
       axios
-        .get(`${process.env.REACT_APP_API_URL}/fmea/id/${id}`, {
+        .get(`${process.env.REACT_APP_API_URL}/schedule/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         })
         .then((res) => {
-          const { date, startTime, endTime, duration, description } = res.data;
+          const { date, startTime, endTime, duration, description } =
+            res.data.data;
 
           setFormInput({
-            date,
+            date: moment(date).format("YYYY-MM-DD"),
             startTime,
             endTime,
             duration,
@@ -93,7 +95,7 @@ const EditSchedule = ({ match, history }) => {
 
       axios
         .put(
-          `${process.env.REACT_APP_API_URL}/schedule/update/${id}`,
+          `${process.env.REACT_APP_API_URL}/schedule/${id}`,
           {
             date,
             startTime,
@@ -189,7 +191,10 @@ const EditSchedule = ({ match, history }) => {
                             name="date"
                             placeholder=""
                             onChange={handleChange("date")}
-                            value={date}
+                            value={
+                              // convert date to yyyy-mm-dd
+                              date
+                            }
                           />
                         </div>
                       </div>

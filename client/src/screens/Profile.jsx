@@ -36,7 +36,7 @@ const Profile = ({ history }) => {
           },
         })
         .then((res) => {
-          const { role, name, email } = res.data;
+          const { role, name, email } = res.data.data;
           setFormInput({ role, name, email });
         })
         .catch((err) => {

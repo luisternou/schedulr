@@ -16,6 +16,7 @@
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
     "jspdf": "^2.3.1",
+    "moment": "^2.29.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flagkit": "^2.0.4",

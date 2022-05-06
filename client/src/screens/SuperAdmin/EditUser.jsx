@@ -33,7 +33,7 @@ const EditUser = ({ history, match }) => {
     const token = getCookie("token");
 
     axios
-      .get(`${process.env.REACT_APP_API_URL}/user/id/${id}`, {
+      .get(`${process.env.REACT_APP_API_URL}/users/id/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ const EditUser = ({ history, match }) => {
       if (password1 === password2) {
         axios
           .put(
-            `${process.env.REACT_APP_API_URL}/user/update/${id}`,
+            `${process.env.REACT_APP_API_URL}/users/update/${id}`,
             {
               role,
               name,
@@ -93,7 +93,7 @@ const EditUser = ({ history, match }) => {
     } else {
       axios
         .put(
-          `${process.env.REACT_APP_API_URL}/user/update/${id}`,
+          `${process.env.REACT_APP_API_URL}/users/update/${id}`,
           {
             role,
             name,

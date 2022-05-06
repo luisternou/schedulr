@@ -29,7 +29,7 @@ const ForgetPassword = ({ history }) => {
     if (email) {
       setFormInput({ ...formInput });
       axios
-        .post(`${process.env.REACT_APP_API_URL}/user/forgotpassword`, {
+        .post(`${process.env.REACT_APP_API_URL}/users/forgotpassword`, {
           email,
         })
         .then((res) => {

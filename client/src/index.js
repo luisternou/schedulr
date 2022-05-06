@@ -48,9 +48,13 @@ ReactDOM.render(
       />
       <ProtectedRoute path="/profile" exact component={Profile} />
       <ProtectedRoute path="/schedule/new" exact component={NewSchedule} />
-      <ProtectedRoute path="/schedule/id/:id" exact component={ViewSchedule} />
       <ProtectedRoute
-        path="/schedule/id/:id/edit"
+        path="/schedule/view/:id"
+        exact
+        component={ViewSchedule}
+      />
+      <ProtectedRoute
+        path="/schedule/view/:id/edit"
         exact
         component={EditSchedule}
       />

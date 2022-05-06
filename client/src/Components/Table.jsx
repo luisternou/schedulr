@@ -55,7 +55,7 @@ function deleteFMEA(id) {
   let language = localStorage.getItem("language");
   const token = getCookie("token");
   axios
-    .delete(`${process.env.REACT_APP_API_URL}/schedule/delete/${id}`, {
+    .delete(`${process.env.REACT_APP_API_URL}/schedule/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -282,8 +282,8 @@ export function ActionButtons({ value }) {
   if (!language) {
     language = "en";
   }
-  const url = `/schedule/${value}`;
-  const editurl = `/${value}/edit`;
+  const url = `/schedule/view/${value}`;
+  const editurl = `/schedule/view/${value}/edit`;
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>

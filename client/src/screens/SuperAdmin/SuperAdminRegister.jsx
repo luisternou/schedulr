@@ -27,7 +27,7 @@ const SuperAdminRegister = () => {
 
   useEffect(() => {
     getLanguage();
-    fetch(`${process.env.REACT_APP_API_URL}/user/superadmin`)
+    fetch(`${process.env.REACT_APP_API_URL}/users/superadmin`)
       .then((resp) => resp.json())
       .then((resp) => {
         let sa;
@@ -50,7 +50,7 @@ const SuperAdminRegister = () => {
       if (password1 === password2) {
         setFormInput({ ...formInput });
         axios
-          .post(`${process.env.REACT_APP_API_URL}/user/register`, {
+          .post(`${process.env.REACT_APP_API_URL}/users/register`, {
             name,
             email,
             password: password1,

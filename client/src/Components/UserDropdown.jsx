@@ -31,7 +31,8 @@ const UserDropdown = ({ history }) => {
       })
         .then((res) => res.json())
         .then((res) => {
-          setUser(res.name);
+          console.log(res.data);
+          setUser(res.data.name);
         })
         .catch((err) => {
           console.log(err);
