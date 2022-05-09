@@ -30,8 +30,7 @@ services:
       - app-network
     volumes:
       - ./server/src:/usr/app/src
-    depends_on:
-      - db
+
     environment:
       - MONGO_URI=mongodb+srv://vitomzev:Assetmanager1@vitomzev-cluster.wv1np.mongodb.net/schedulr?retryWrites=true&w=majority
       - JWT_SECRET=CQ7trJ9PkdapbmwbayYFeSJPqY5p8AbBPZ2WkMWQ32buEZcsMj7xmAJy5jw8Aq8kkXM3hKeE5Gw97qAwE6ne8AgLM7SRj5nAsyhppQP93Cgj7a9CYRqn6cNny2TSnhYG4vYkxvPzTpDEpAwFKxUtSjTsDCxx2kDF9p6Ey3Wz8CQKGtEksbAjXVCMD6Uh7XM3LGLb5pyQT4pqD22B3ZmrHVNFkhT3DZxDDxRjDfDHjaKsA7pVQs2sQwVtHwstBx2F
