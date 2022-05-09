@@ -43,6 +43,7 @@ const Home = ({ history }) => {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
+        mode: "no-cors",
       }
     );
     fetch(request)
