@@ -1,8 +1,8 @@
 {
   "dir": "auto",
   "display": "standalone",
-  "name": "KirEx",
-  "short_name": "KirEx",
+  "name": "Schedulr",
+  "short_name": "Schedulr",
   "scope": "/",
   "start_url": "/",
   "lang": "en",
