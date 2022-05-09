@@ -17,30 +17,22 @@
   },
 
   {
-    "af": "Nuwe FMEA",
-    "de": "Neue FMEA",
-    "en": "New FMEA",
-    "link": "/fmea/new",
+    "af": "Nuwe Skof",
+    "de": "Neue Schicht",
+    "en": "New Shift",
+    "link": "/shift/new",
     "icon": "far fa-file-alt",
     "role": "user"
   },
   {
-    "af": "My FMEAs",
-    "de": "Meine FMEAs",
-    "en": "My FMEAs",
-    "link": "/fmea/my",
+    "af": "My skofte",
+    "de": "Meine Schichten",
+    "en": "My Shifts",
+    "link": "/shift/my",
     "icon": "far fa-list-alt",
     "role": "user"
   },
 
-  {
-    "af": "Wys alle FMEAS",
-    "de": "Alle FMEAs anzeigen",
-    "en": "View all FMEAs",
-    "link": "/admin",
-    "icon": "fas fa-th-list",
-    "role": "admin"
-  },
   {
     "af": "Gebruikers",
     "de": "Benutzer",

@@ -18,8 +18,9 @@ const Home = ({ history }) => {
 
   let user_id = jwt.decode(token)._id;
   const [stats, setStats] = useState([]);
+  const [navigation, setNavigation] = useState([]);
   const [result, setResult] = useState([]);
-  const [isFMEA, setIsFMEA] = useState([]);
+  const [isShift, setIsShift] = useState([]);
   const [language, setLanguage] = useState([]);
   const getLanguage = () => {
     const lang = localStorage.getItem("language");
@@ -30,6 +31,33 @@ const Home = ({ history }) => {
     setLanguage("en");
   };
 
+  function getNav() {
+    // use the citymaper api to get the navigation data
+
+    //set the request's mode to 'no-cors'
+    const request = new Request(
+      `https://api.external.citymapper.com/api/1/directions/transit?start=48.211890,16.412290&end=48.120669,16.563048&time_type=arrive&time=2022-05-11T08:15:00+02:00`,
+      {
+        headers: {
+          "Citymapper-Partner-Key": "vfMK0MMQAZ0QvL0NIlks1WIwVRfoILVl",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
+    fetch(request)
+      .then((response) => response.json())
+      .then(
+        (data) => {
+          setNavigation(data);
+        }
+        //catch the error
+      )
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   useEffect(() => {
     let fallbackStats = {
       userCount: 0,
@@ -37,6 +65,7 @@ const Home = ({ history }) => {
       totalLastMonth: 0,
       totalLastMonthUser: 0,
     };
+    getNav();
     const getStats = () => {
       fetch(`${process.env.REACT_APP_API_URL}/fmea/summary/${user_id}`, {
         headers: {
@@ -53,26 +82,26 @@ const Home = ({ history }) => {
         });
     };
     getStats();
-    const getFMEA = () => {
-      fetch(`${process.env.REACT_APP_API_URL}/fmea/user/${user_id}/5`, {
+    const getShift = () => {
+      fetch(`${process.env.REACT_APP_API_URL}/shift/user/${user_id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
         .then((resp) => resp.json())
         .then((resp) => {
-          setResult(resp);
-          if (resp.length > 0) {
-            setIsFMEA(true);
+          setResult(resp.data);
+          if (resp.data.length > 0) {
+            setIsShift(true);
           } else {
-            setIsFMEA(false);
+            setIsShift(false);
           }
         })
         .catch((err) => {
           toast.error(languageData.toast_home_stats[language]);
         });
     };
-    getFMEA();
+    getShift();
     getLanguage();
   }, [token, user_id, language]);
 
@@ -91,32 +120,6 @@ const Home = ({ history }) => {
     return dt + "/" + month + "/" + year;
   }
 
-  function statusPill(value) {
-    let language = localStorage.getItem("language");
-    if (!language) {
-      language = "en";
-    }
-    const status = value ? value.toLowerCase() : "unknown";
-    let status_translated = null;
-    if (status.startsWith("complete")) {
-      status_translated = languageData.status_complete[language];
-    }
-    if (status.startsWith("incomplete")) {
-      status_translated = languageData.status_incomplete[language];
-    }
-    return (
-      <span
-        className={classNames(
-          "px-3 py-1 uppercase leading-wide font-bold text-xs rounded-full shadow-sm",
-          status.startsWith("complete") ? "bg-green-100 text-green-800" : null,
-          status.startsWith("incomplete") ? "bg-red-100 text-red-800" : null
-        )}
-      >
-        {status_translated}
-      </span>
-    );
-  }
-
   // create a function to redirect to the new shift page
   const createNewShift = () => {
     window.location.href = "/shift/new";
@@ -132,52 +135,8 @@ const Home = ({ history }) => {
       <div className="relative BackgroundImage md:ml-64 bg-black-100">
         <Navbar />
         {/* Header */}
-        <div className="relative md:pt-32 pb-32 pt-12">
-          <div className="px-4 md:px-10 mx-auto w-full">
-            <div>
-              {/* Card stats */}
-              <div className="flex flex-wrap">
-                <HomeCard
-                  message={
-                    languageData.homepage_total_fmeas_submitted[language]
-                  }
-                  stat={stats.count}
-                  icon="fas fa-hashtag"
-                  colour="bg-red-500"
-                />
-                {/* Total submitted by current user */}
-                <HomeCard
-                  message={
-                    languageData.homepage_total_you_fmeas_submitted[language]
-                  }
-                  stat={stats.userCount}
-                  icon="fas fa-user-edit"
-                  colour="bg-orange-500"
-                />
-                {/* Last month total submited */}
-                <HomeCard
-                  message={
-                    languageData.homepage_total_fmeas_submitted_lastmonth[
-                      language
-                    ]
-                  }
-                  stat={stats.totalLastMonth}
-                  icon="fas fa-calendar"
-                  colour="bg-pink-500"
-                />
-
-                {/* Last month submitted by current user */}
-                <HomeCard
-                  message={
-                    languageData.homepage_total_you_fmeas_last_month[language]
-                  }
-                  stat={stats.totalLastMonthUser}
-                  icon="fas fa-calendar-alt"
-                  colour="bg-blue-500"
-                />
-              </div>
-            </div>
-          </div>
+        <div className="relative md:pt-32 pb-10 pt-12">
+          <div className="px-4 md:px-10 mx-auto w-full"></div>
         </div>
         {/* Create a button to add a new shift */}
 
@@ -196,27 +155,25 @@ const Home = ({ history }) => {
                   </button>
                 </div>
               </center>
-              <ShiftCard
-                message={
-                  languageData.homepage_total_you_fmeas_last_month[language]
-                }
-                stat={stats.totalLastMonthUser}
-                date={"2022-05-19"}
-                startTime={"12:00"}
-                endTime={"16:00"}
-                icon="fas fa-eye"
-                colour="bg-blue-500"
-                nextshift={true}
-              />
-              <br />
-              <ShiftCard
-                message={
-                  languageData.homepage_total_you_fmeas_last_month[language]
-                }
-                stat={stats.totalLastMonthUser}
-                icon="fas fa-eye"
-                colour="bg-blue-500"
-              />
+              {/* display the shift cards and set nextshift to true if it is the first shift else false */}
+              {isShift ? (
+                result.map((shift, index) => {
+                  return (
+                    <ShiftCard
+                      key={index}
+                      shift={shift}
+                      nextshift={index === 0 ? true : false}
+                      language={language}
+                      icon="fas fa-eye"
+                      colour="bg-gray-500"
+                    />
+                  );
+                })
+              ) : (
+                <h2 className="text-center text-2xl font-bold text-gray-800">
+                  no shifts
+                </h2>
+              )}
             </div>
             {/* <HomeInfo languageData={languageData} language={language} /> */}
           </div>

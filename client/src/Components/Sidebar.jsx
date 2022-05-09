@@ -116,35 +116,6 @@ function Sidebar({ history }) {
               </div>
             </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleSubmit();
-              }}
-              className="mt-6 mb-4 md:hidden"
-            >
-              <div className="p-4">
-                <div className="bg-white flex items-center rounded-full shadow-xl">
-                  <input
-                    className="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none"
-                    id="search_sidebar"
-                    type="text"
-                    name="query"
-                    onChange={handleChange("query")}
-                    placeholder={languageData.navbar_search[language]}
-                  />
-                  <div className="p-4">
-                    <button
-                      type="submit"
-                      className="bg-gray-700 text-white rounded-full p-2 hover:bg-gray-500 focus:outline-none w-8 h-8 flex items-center justify-center"
-                    >
-                      <i className="fas fa-search"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
               {links.map((link, i) => {
                 return (

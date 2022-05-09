@@ -1,6 +1,7 @@
 //import React from 'react';
 import React, { useState, useEffect } from "react";
 import languageData from "../../config/Languages.json";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import { getCookie, getUserId } from "../../helpers/auth";
@@ -15,7 +16,7 @@ import Table, {
 import { Helmet } from "react-helmet";
 import Footer from "../../Components/Footer";
 const ResultFMEA = ({ history, match }) => {
-  const [isData, setIsData] = useState([]);
+  const [isData, setIsData] = useState(false);
   const [data, setData] = useState([]);
 
   const [language, setLanguage] = useState([]);
@@ -50,7 +51,12 @@ const ResultFMEA = ({ history, match }) => {
           const newDate = `${day}.${month}.${year}`;
           return { ...item, date: newDate };
         });
-        setIsData(true);
+        if (data.length > 0) {
+          setIsData(true);
+        } else {
+          setIsData(false);
+        }
+
         setData(data);
       })
       .catch((err) => {
@@ -177,9 +183,15 @@ const ResultFMEA = ({ history, match }) => {
                     <Table columns={columns} data={data} language={language} />
                   ) : (
                     <div className="justify-center flex">
-                      <h3 className="">
-                        {languageData.result_no_results[language]}
-                      </h3>
+                      <Link
+                        to={`/shift/new`}
+                        className="rounded-lg shadow-md lg:shadow-lg w-full py-3 mt-10 bg-gray-800 font-medium text-white uppercase rounded-sm focus:outline-none hover:bg-gray-700 hover:shadow-none flex items-center justify-center"
+                      >
+                        <i className="fas fa-edit fa 1x w-6  -ml-2" />
+                        <span className="ml-3">
+                          {languageData.newfmea_new_fmea[language]}
+                        </span>
+                      </Link>
                     </div>
                   )}
                 </div>

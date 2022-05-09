@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import moment from "moment";
 import { getUserId, getCookie } from "../../helpers/auth";
 import languageData from "../../config/Languages.json";
 import { Helmet } from "react-helmet";
@@ -37,7 +38,7 @@ const NewShift = (props) => {
 
   const [formInput, setFormInput] = useState({
     userID: currentUser._id,
-    date: "",
+    date: moment().format("YYYY-MM-DD"),
     startTime: "",
     endTime: "",
     duration: "",
@@ -49,8 +50,13 @@ const NewShift = (props) => {
 
   const handleChange = (text) => (e) => {
     setFormInput({ ...formInput, [text]: e.target.value });
-    console.log(formInput);
+    // if startTime is not empty and endTime is not empty, set duration to the difference between startTime and endTime in hours if duration is greater than 6 hours subtract 30 minutes
   };
+
+  const handleDescription = (text) => (e) => {
+    setFormInput({ ...formInput, [text]: e.target.value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const authtoken = getCookie("token");
@@ -160,6 +166,7 @@ const NewShift = (props) => {
                             name="date"
                             placeholder=""
                             onChange={handleChange("date")}
+                            min={moment().format("YYYY-MM-DD")}
                             value={date}
                           />
                         </div>
@@ -192,14 +199,16 @@ const NewShift = (props) => {
                           >
                             {languageData.fmea_project_number[language]}
                           </label>
+                          {/* create a time input with hours and minutes with 15 minute intervals */}
                           <input
-                            className="shadow-lg appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-00 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white shadow-lg"
                             id="grid-start-time"
                             type="time"
-                            name="startTime"
                             placeholder="16:00"
+                            name="endTime"
                             onChange={handleChange("endTime")}
                             value={endTime}
+                            step="900"
                           />
                         </div>
                       </div>
@@ -236,7 +245,7 @@ const NewShift = (props) => {
                             type="text"
                             name="description"
                             placeholder="TWIN"
-                            onChange={handleChange("description")}
+                            onChange={handleDescription("description")}
                             value={description}
                           />
                         </div>

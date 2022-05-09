@@ -188,7 +188,7 @@ const ViewShift = ({ history, match }) => {
                       <div></div>
 
                       <Link
-                        to={`/shift/update/${id}`}
+                        to={`/shift/view/${id}/edit`}
                         className="rounded-lg shadow-md lg:shadow-lg w-full py-3 mt-10 bg-gray-800 font-medium text-white uppercase rounded-sm focus:outline-none hover:bg-gray-700 hover:shadow-none flex items-center justify-center"
                       >
                         <i className="fas fa-edit fa 1x w-6  -ml-2" />

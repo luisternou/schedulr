@@ -131,15 +131,26 @@
     "en": "New shift"
   },
 
+  "shift_card_hour": {
+    "af": "Uur",
+    "de": "Stunde",
+    "en": "Hour"
+  },
+  "shift_card_hours": {
+    "af": "Ure",
+    "de": "Stunden",
+    "en": "Hours"
+  },
+
   "result_search_result": {
-    "af": "Soekresultaate",
-    "de": "Suchergebnisse",
-    "en": "Search Results"
+    "af": "My skofte",
+    "de": "Meine Schichten",
+    "en": "My Shifts"
   },
   "result_no_results": {
-    "af": "Geen Shifts gevind met hiedie kriteria",
-    "de": "Keine Shifts mit diesen Kriterien gefunden",
-    "en": "No Shifts found with these criterias"
+    "af": "Jy het geen skofte",
+    "de": "Du hast keine Schichten",
+    "en": "You have no Shifts"
   },
   "fmea_table_project": {
     "af": "projek",
@@ -895,12 +906,12 @@
   },
   "table_delete_user_message_part_one": {
     "af": "Jy is op die punt om hierdie Gebruiker en alle gepaardgaande data te verwyder .",
-    "de": "Du sind im Begriff, diesen Benutzer und alle dazugehörigen Daten zu löschen. ",
+    "de": "Du bist im Begriff, diesen Benutzer und alle dazugehörigen Daten zu löschen. ",
     "en": "You are about to delete this User and all the data that pertains to it. "
   },
   "table_delete_fmea_message_part_one": {
     "af": "Jy is op die punt om hierdie Shift -verslag en alle gepaardgaande data te verwyder .",
-    "de": "Du sind im Begriff, diesen Shift-Bericht und alle dazugehörigen Daten zu löschen. ",
+    "de": "Du bist im Begriff, diesen Shift-Bericht und alle dazugehörigen Daten zu löschen. ",
     "en": "You are about to delete this Shift report and all the data that pertains to it. "
   },
   "table_delete_user_message_part_two": {

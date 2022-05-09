@@ -8,7 +8,7 @@ const swaggerjsdoc = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
 
 // use monogoose to connect to mongodb
-console.log(process.env.MONGO_URI);
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

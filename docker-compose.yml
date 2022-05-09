@@ -1,0 +1,48 @@
+version: "3"
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - app-network
+    volumes:
+      - ./client/src:/usr/app/src
+      - ./client/public:/usr/app/public
+    depends_on:
+      - server
+    environment:
+      - REACT_APP_API_URL=http://vilix.vitomilix.io:8000/api/v1
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
+    stdin_open: true
+    tty: true
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    networks:
+      - app-network
+    volumes:
+      - ./server/src:/usr/app/src
+    depends_on:
+      - db
+    environment:
+      - MONGO_URI=mongodb+srv://vitomzev:Assetmanager1@vitomzev-cluster.wv1np.mongodb.net/schedulr?retryWrites=true&w=majority
+      - JWT_SECRET=CQ7trJ9PkdapbmwbayYFeSJPqY5p8AbBPZ2WkMWQ32buEZcsMj7xmAJy5jw8Aq8kkXM3hKeE5Gw97qAwE6ne8AgLM7SRj5nAsyhppQP93Cgj7a9CYRqn6cNny2TSnhYG4vYkxvPzTpDEpAwFKxUtSjTsDCxx2kDF9p6Ey3Wz8CQKGtEksbAjXVCMD6Uh7XM3LGLb5pyQT4pqD22B3ZmrHVNFkhT3DZxDDxRjDfDHjaKsA7pVQs2sQwVtHwstBx2F
+      - JWT_EXPIRE=30d
+      - EMAIL_SERVICE=SendGrid
+      - EMAIL_USERNAME=apikey
+      - EMAIL_PASSWORD=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
+      - EMAIL_FROM=schedulr@vitomilix.io
+      - PORT=8000
+    command: /usr/app/node_modules/.bin/nodemon -L server.js
+
+networks:
+  app-network:
+    driver: bridge

@@ -339,7 +339,7 @@ export function ActionButtons({ value }) {
                       }
                     </p>
                     <hr />
-                    <small>FMEA id: {value}</small>
+                    <small>Shift id: {value}</small>
                   </div>
                   {/*footer*/}
                   <div className="flex items-center justify-end p-6 border-t border-solid border-black-200 rounded-b">

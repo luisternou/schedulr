@@ -1,30 +1,19 @@
 import React, { useState } from "react";
-
+import moment from "moment";
 import axios from "axios";
+import languageData from "../config/Languages.json";
+import { Link } from "react-router-dom";
 
 const ShiftCard = (props) => {
   const [departure, setDeparture] = useState([]);
 
   // create a function that calls the citymapper api and returns the data if nextshift is set to true
   const getNextShift = () => {
-    // use props.date to get the date
-    // use props.starttime to get the start time and create a datetime string
-
-    // get the date in the format of YYYY-MM-DD
+    return;
     let date = props.date;
     // convert date to string
     date = date.toString();
-    // let date_array = date.split("-");
 
-    // let dateString =
-    //   date_array[2] +
-    //   "-" +
-    //   date_array[1] +
-    //   "-" +
-    //   date_array[0] +
-    //   "T" +
-    //   props.starttime +
-    //   ":00";
     let dateString = date + "T" + props.startTime + ":00";
     let timezone = undefined;
     // use http://worldtimeapi.org/api/timezone/Europe/Vienna to get the timezone
@@ -58,24 +47,26 @@ const ShiftCard = (props) => {
   }
 
   return (
-    <div className="w-full  px-4">
+    <div className="w-full  px-4 py-2">
       <div className="relative flex flex-col min-w-0 break-words bg-white rounded-xl mb-6 xl:mb-0 shadow-lg">
         <div className="flex-auto p-4">
           <div className="flex flex-wrap">
             <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
               <center>
                 <h3 className="text-black-400 uppercase font-bold text-MD">
-                  {/* {props.message} */} DATE - DESCRIPTION
+                  {moment(props.shift.date).format("DD.MM.YYYY")} -{" "}
+                  {props.shift.description}
                 </h3>
               </center>
               <center>
                 <span className="font-semibold text-sm text-black-700">
-                  {/* {props.stat || 0} */} STARTTIME - ENDTIME
+                  {props.shift.startTime} - {props.shift.endTime}
                 </span>
               </center>
               <center>
                 <h3 className="font-semibold text-sm text-black-700">
-                  {/* {props.stat || 0} */} DURATION
+                  {props.shift.duration}{" "}
+                  {languageData.shift_card_hours[props.language]}
                 </h3>
               </center>
               {/* If props.nextshift is true show a message else not */}
@@ -88,11 +79,13 @@ const ShiftCard = (props) => {
               ) : null}
             </div>
             <div className="relative w-auto pl-4 flex-initial">
-              <div
-                className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full ${props.colour}`}
-              >
-                <i className={props.icon}></i>
-              </div>
+              <Link to={`/shift/view/${props.shift._id}`}>
+                <div
+                  className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full ${props.colour}`}
+                >
+                  <i className={props.icon}></i>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
