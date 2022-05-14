@@ -19,10 +19,22 @@ exports.createController = async (req, res) => {
 };
 
 exports.getAllController = async (req, res) => {
+  // get all shifts and sort them by date
   const shifts = await Shift.find();
+  // sort shifts by date
+  const sortedShifts = shifts.sort((a, b) => {
+    if (a.date < b.date) {
+      return -1;
+    }
+    if (a.date > b.date) {
+      return 1;
+    }
+    return 0;
+  });
+
   res.status(200).json({
     message: "Shifts fetched successfully",
-    data: shifts,
+    data: sortedShifts,
   });
 };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import jwt from "jsonwebtoken";
@@ -17,11 +17,12 @@ const Home = ({ history }) => {
   const token = getCookie("token");
 
   let user_id = jwt.decode(token)._id;
-  const [stats, setStats] = useState([]);
+
   const [navigation, setNavigation] = useState([]);
   const [result, setResult] = useState([]);
   const [isShift, setIsShift] = useState([]);
   const [language, setLanguage] = useState([]);
+  const [options, setOptions] = useState([]);
   const getLanguage = () => {
     const lang = localStorage.getItem("language");
 
@@ -31,58 +32,28 @@ const Home = ({ history }) => {
     setLanguage("en");
   };
 
-  function getNav() {
-    // use the citymaper api to get the navigation data
+  async function getNav(options64) {
+    if (navigation.routes) {
+      return;
+    }
+    // convert options to base64 uri format
+    const options = encodeURI(options64);
+    const url = `${process.env.REACT_APP_API_URL}/nav/${options}`;
 
-    //set the request's mode to 'no-cors'
-    const request = new Request(
-      `https://api.external.citymapper.com/api/1/directions/transit?start=48.211890,16.412290&end=48.120669,16.563048&time_type=arrive&time=2022-05-11T08:15:00+02:00`,
-      {
-        headers: {
-          "Citymapper-Partner-Key": "vfMK0MMQAZ0QvL0NIlks1WIwVRfoILVl",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        mode: "no-cors",
-      }
-    );
-    fetch(request)
-      .then((response) => response.json())
-      .then(
-        (data) => {
-          setNavigation(data);
-        }
-        //catch the error
-      )
-      .catch((error) => {
-        console.log(error);
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Citymapper-Partner-Key": process.env.REACT_APP_CITYMAPPER_API_KEY,
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setNavigation(res);
       });
   }
 
   useEffect(() => {
-    let fallbackStats = {
-      userCount: 0,
-      count: 0,
-      totalLastMonth: 0,
-      totalLastMonthUser: 0,
-    };
-    getNav();
-    const getStats = () => {
-      fetch(`${process.env.REACT_APP_API_URL}/fmea/summary/${user_id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-        .then((resp) => resp.json())
-        .then((resp) => {
-          setStats(resp);
-        })
-        .catch((err) => {
-          setStats(fallbackStats);
-          toast.error(languageData.toast_home_stats[language]);
-        });
-    };
-    getStats();
     const getShift = () => {
       fetch(`${process.env.REACT_APP_API_URL}/shift/user/${user_id}`, {
         headers: {
@@ -91,20 +62,41 @@ const Home = ({ history }) => {
       })
         .then((resp) => resp.json())
         .then((resp) => {
-          setResult(resp.data);
-          if (resp.data.length > 0) {
-            setIsShift(true);
-          } else {
-            setIsShift(false);
-          }
+          let data = resp.data;
+          // sort by date
+          data.sort((a, b) => {
+            return new Date(a.date) - new Date(b.date);
+          });
+          setIsShift(data);
+
+          setResult(data);
         })
         .catch((err) => {
           toast.error(languageData.toast_home_stats[language]);
         });
     };
+
     getShift();
+
+    //getNav(result.data[0].date, result.data[0].start_time);
     getLanguage();
   }, [token, user_id, language]);
+
+  if (result.length !== 0) {
+    let nextshift = result[0];
+    let options = {
+      date: nextshift.date,
+      shift_time: nextshift.startTime,
+    };
+
+    options = JSON.stringify(options);
+
+    options = btoa(options);
+
+    options = encodeURIComponent(options);
+    console.log("calling nav", options);
+    getNav(options);
+  }
 
   function convertDate(d) {
     let date = new Date(d);
@@ -126,8 +118,11 @@ const Home = ({ history }) => {
     window.location.href = "/shift/new";
   };
 
+  console.log(navigation);
+
   return (
-    <>
+    //  only render when navigation is loaded
+    <Suspense fallback={<div>Loading...</div>}>
       <Sidebar />
       <ToastContainer />
       <Helmet>
@@ -164,6 +159,11 @@ const Home = ({ history }) => {
                       key={index}
                       shift={shift}
                       nextshift={index === 0 ? true : false}
+                      departuretime={
+                        navigation.routes
+                          ? navigation.routes[0].route_departure_time
+                          : null
+                      }
                       language={language}
                       icon="fas fa-eye"
                       colour="bg-gray-500"
@@ -181,7 +181,7 @@ const Home = ({ history }) => {
           <Footer />
         </div>
       </div>
-    </>
+    </Suspense>
   );
 };
 

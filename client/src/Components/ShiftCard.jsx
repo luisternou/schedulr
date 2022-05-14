@@ -5,46 +5,7 @@ import languageData from "../config/Languages.json";
 import { Link } from "react-router-dom";
 
 const ShiftCard = (props) => {
-  const [departure, setDeparture] = useState([]);
-
   // create a function that calls the citymapper api and returns the data if nextshift is set to true
-  const getNextShift = () => {
-    return;
-    let date = props.date;
-    // convert date to string
-    date = date.toString();
-
-    let dateString = date + "T" + props.startTime + ":00";
-    let timezone = undefined;
-    // use http://worldtimeapi.org/api/timezone/Europe/Vienna to get the timezone
-    axios
-      .get(`http://worldtimeapi.org/api/timezone/Europe/Vienna`)
-      .then((resp) => {
-        // use the timezone to get the time difference
-        let dst = resp.data.dst;
-        if (dst === true) {
-          timezone = "+02:00";
-        } else {
-          timezone = "+01:00";
-        }
-
-        let url = `https://api.external.citymapper.com/api/1/directions/transit?start=48.211890,16.412290&end=48.120669,16.563048&time_type=arrive&time=${dateString}${timezone}`;
-        console.log(url);
-        if (props.nextshift) {
-          fetch(url, {
-            headers: {
-              "Citymapper-Partner-Key":
-                process.env.REACT_APP_CITYMAPPER_API_KEY,
-              "Access-Control-Allow-Origin": "*",
-            },
-          });
-        }
-      });
-  };
-
-  if (props.nextshift) {
-    getNextShift();
-  }
 
   return (
     <div className="w-full  px-4 py-2">
@@ -72,9 +33,16 @@ const ShiftCard = (props) => {
               {/* If props.nextshift is true show a message else not */}
               {props.nextshift ? (
                 <center>
-                  <h3 className="xl:w-5/12 lg:w-5/12 px-3 py-1 uppercase leading-wide font-bold text-xs rounded-full shadow-sm bg-green-100 text-green-800">
-                    {/* {props.stat || 0} */} Departure time suggestion
-                  </h3>
+                  <a href="https://citymapper.com/directions?endcoord=48.120669%2C16.563048&endname=Flughafen%20Wien">
+                    <h3 className="xl:w-5/12 lg:w-5/12 px-3 py-1 uppercase leading-wide font-bold text-xs rounded-full shadow-sm bg-green-100 text-green-800">
+                      {
+                        // subtract 5 minutes
+                        moment(props.departuretime)
+                          .subtract(5, "minutes")
+                          .format("DD.MM.YYYY HH:mm")
+                      }
+                    </h3>
+                  </a>
                 </center>
               ) : null}
             </div>
