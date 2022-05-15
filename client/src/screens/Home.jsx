@@ -118,6 +118,7 @@ const Home = ({ history }) => {
     window.location.href = "/shift/new";
   };
 
+  console.log("navigation");
   console.log(navigation);
 
   return (
@@ -152,7 +153,7 @@ const Home = ({ history }) => {
                 </div>
               </center>
               {/* display the shift cards and set nextshift to true if it is the first shift else false */}
-              {isShift ? (
+              {isShift && navigation ? (
                 result.map((shift, index) => {
                   return (
                     <ShiftCard

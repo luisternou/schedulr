@@ -45,7 +45,7 @@ exports.getNavController = async (req, res) => {
   // add headers to the request
   const headers = {
     "Content-Type": "application/json",
-    "Citymapper-Partner-Key": "vfMK0MMQAZ0QvL0NIlks1WIwVRfoILVl",
+    "Citymapper-Partner-Key": process.env.CITYMAPPER_PARTNER_KEY,
   };
   // fetch the data from the url
   const response = await fetch(url, { headers });
