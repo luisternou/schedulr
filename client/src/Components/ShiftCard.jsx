@@ -28,6 +28,7 @@ const ShiftCard = (props) => {
   }
 
   if (props.nextShift) {
+    console.log("next shift");
     let options = {
       date: props.date,
       shift_time: props.startTime,
