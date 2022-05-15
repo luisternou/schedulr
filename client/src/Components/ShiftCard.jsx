@@ -8,12 +8,13 @@ const ShiftCard = (props) => {
   console.log(props);
   // create a function that calls the citymapper api and returns the data if nextshift is set to true
   const [departure, setDeparture] = useState([]);
+  const [show, setShow] = useState(false);
   async function getNav(options64) {
     if (departure.routes) {
       return;
     }
     // convert options to base64 uri format
-    const options = encodeURI(options64);
+    const options = encodeURIComponent(options64);
     const url = `${process.env.REACT_APP_API_URL}/nav/${options}`;
 
     fetch(url, {
@@ -25,6 +26,7 @@ const ShiftCard = (props) => {
       .then((res) => res.json())
       .then((res) => {
         setDeparture(res);
+        console.dir(res);
       });
   }
 
@@ -42,6 +44,10 @@ const ShiftCard = (props) => {
     options = encodeURIComponent(options);
     console.log("calling nav", options);
     getNav(options);
+  }
+
+  if (departure.routes) {
+    console.log("departure", departure);
   }
 
   return (
@@ -68,13 +74,13 @@ const ShiftCard = (props) => {
                 </h3>
               </center>
               {/* If props.nextshift is true show a message else not */}
-              {props.nextshift ? (
+              {props.nextshift && departure.routes ? (
                 <center>
                   <a href="https://citymapper.com/directions?endcoord=48.120669%2C16.563048&endname=Flughafen%20Wien">
                     <h3 className="xl:w-5/12 lg:w-5/12 px-3 py-1 uppercase leading-wide font-bold text-xs rounded-full shadow-sm bg-green-100 text-green-800">
                       {
                         // subtract 5 minutes
-                        moment(departure)
+                        moment(departure.routes[0].route_departure_time)
                           .subtract(5, "minutes")
                           .format("DD.MM.YYYY HH:mm")
                       }

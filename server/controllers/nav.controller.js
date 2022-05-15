@@ -7,7 +7,7 @@ exports.getNavController = async (req, res) => {
   let decodedOptions = decodeURIComponent(options);
 
   decodedOptions = atob(decodedOptions);
-  console.log(decodedOptions);
+
   let optionsObject = JSON.parse(decodedOptions);
 
   // remove everything after the T in the time string
@@ -40,6 +40,7 @@ exports.getNavController = async (req, res) => {
   }
 
   let url = `https://api.external.citymapper.com/api/1/directions/transit?start=48.211890,16.412290&end=48.120669,16.563048&time_type=arrive&time=${datestring}T${timestring}:00`;
+  console.log(url);
   // add headers to the request
   const headers = {
     "Content-Type": "application/json",
