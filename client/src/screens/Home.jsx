@@ -32,27 +32,6 @@ const Home = ({ history }) => {
     setLanguage("en");
   };
 
-  async function getNav(options64) {
-    if (navigation.routes) {
-      return;
-    }
-    // convert options to base64 uri format
-    const options = encodeURI(options64);
-    const url = `${process.env.REACT_APP_API_URL}/nav/${options}`;
-
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Citymapper-Partner-Key": process.env.REACT_APP_CITYMAPPER_API_KEY,
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setNavigation(res);
-      });
-  }
-
   useEffect(() => {
     const getShift = () => {
       fetch(`${process.env.REACT_APP_API_URL}/shift/user/${user_id}`, {
@@ -68,7 +47,6 @@ const Home = ({ history }) => {
             return new Date(a.date) - new Date(b.date);
           });
           setIsShift(data);
-
           setResult(data);
         })
         .catch((err) => {
@@ -81,22 +59,6 @@ const Home = ({ history }) => {
     //getNav(result.data[0].date, result.data[0].start_time);
     getLanguage();
   }, [token, user_id, language]);
-
-  if (result.length !== 0) {
-    let nextshift = result[0];
-    let options = {
-      date: nextshift.date,
-      shift_time: nextshift.startTime,
-    };
-
-    options = JSON.stringify(options);
-
-    options = btoa(options);
-
-    options = encodeURIComponent(options);
-    console.log("calling nav", options);
-    getNav(options);
-  }
 
   function convertDate(d) {
     let date = new Date(d);
@@ -153,18 +115,13 @@ const Home = ({ history }) => {
                 </div>
               </center>
               {/* display the shift cards and set nextshift to true if it is the first shift else false */}
-              {isShift && navigation ? (
+              {isShift ? (
                 result.map((shift, index) => {
                   return (
                     <ShiftCard
                       key={index}
                       shift={shift}
                       nextshift={index === 0 ? true : false}
-                      departuretime={
-                        navigation.routes
-                          ? navigation.routes[0].route_departure_time
-                          : null
-                      }
                       language={language}
                       icon="fas fa-eye"
                       colour="bg-gray-500"

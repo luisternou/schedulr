@@ -6,7 +6,42 @@ import { Link } from "react-router-dom";
 
 const ShiftCard = (props) => {
   // create a function that calls the citymapper api and returns the data if nextshift is set to true
-  console.log(props);
+  const [departure, setDeparture] = useState([]);
+  async function getNav(options64) {
+    if (departure.routes) {
+      return;
+    }
+    // convert options to base64 uri format
+    const options = encodeURI(options64);
+    const url = `${process.env.REACT_APP_API_URL}/nav/${options}`;
+
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setDeparture(res);
+      });
+  }
+
+  if (props.nextShift) {
+    let options = {
+      date: props.date,
+      shift_time: props.startTime,
+    };
+
+    options = JSON.stringify(options);
+
+    options = btoa(options);
+
+    options = encodeURIComponent(options);
+    console.log("calling nav", options);
+    getNav(options);
+  }
+
   return (
     <div className="w-full  px-4 py-2">
       <div className="relative flex flex-col min-w-0 break-words bg-white rounded-xl mb-6 xl:mb-0 shadow-lg">
@@ -37,7 +72,7 @@ const ShiftCard = (props) => {
                     <h3 className="xl:w-5/12 lg:w-5/12 px-3 py-1 uppercase leading-wide font-bold text-xs rounded-full shadow-sm bg-green-100 text-green-800">
                       {
                         // subtract 5 minutes
-                        moment(props.departuretime)
+                        moment(departure)
                           .subtract(5, "minutes")
                           .format("DD.MM.YYYY HH:mm")
                       }
