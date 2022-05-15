@@ -5,6 +5,7 @@ import languageData from "../config/Languages.json";
 import { Link } from "react-router-dom";
 
 const ShiftCard = (props) => {
+  console.log(props);
   // create a function that calls the citymapper api and returns the data if nextshift is set to true
   const [departure, setDeparture] = useState([]);
   async function getNav(options64) {
@@ -27,15 +28,15 @@ const ShiftCard = (props) => {
       });
   }
 
-  if (props.nextShift) {
+  if (props.nextshift) {
     console.log("next shift");
     let options = {
-      date: props.date,
-      shift_time: props.startTime,
+      date: props.shift.date,
+      shift_time: props.shift.startTime,
     };
 
     options = JSON.stringify(options);
-
+    console.log(options);
     options = btoa(options);
 
     options = encodeURIComponent(options);

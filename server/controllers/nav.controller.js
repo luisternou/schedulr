@@ -7,10 +7,8 @@ exports.getNavController = async (req, res) => {
   let decodedOptions = decodeURIComponent(options);
 
   decodedOptions = atob(decodedOptions);
-  console.log("do", decodedOptions);
+  console.log(decodedOptions);
   let optionsObject = JSON.parse(decodedOptions);
-
-  console.log(optionsObject);
 
   // remove everything after the T in the time string
   const datestring = optionsObject.date.split("T")[0];
