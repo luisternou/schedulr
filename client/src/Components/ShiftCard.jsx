@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ShiftCard = (props) => {
   // create a function that calls the citymapper api and returns the data if nextshift is set to true
-  console.log(props.key);
+  console.log(props);
   return (
     <div className="w-full  px-4 py-2">
       <div className="relative flex flex-col min-w-0 break-words bg-white rounded-xl mb-6 xl:mb-0 shadow-lg">
